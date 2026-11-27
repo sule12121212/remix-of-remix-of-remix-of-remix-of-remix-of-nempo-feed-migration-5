@@ -24,6 +24,13 @@
   background-repeat: no-repeat;
 }
 
+.nbt-letters,
+.nbt-glint-wrap {
+  /* title lowered from the sky towards the middle of the frame */
+  top: 230px;
+  bottom: -230px;
+}
+
 .nbt-plate {
   background-image: var(--nbt-plate);
 }
@@ -115,7 +122,7 @@
 .nbt-mandala {
   position: absolute;
   left: 50%;
-  top: 31%;
+  top: 47%;
   mix-blend-mode: screen;
   pointer-events: none;
   filter: drop-shadow(0 0 16px rgba(255, 200, 70, 0.55));
@@ -134,7 +141,7 @@
 .nbt-burst {
   position: absolute;
   left: 50%;
-  top: 31%;
+  top: 47%;
   width: 640px;
   height: 640px;
   border-radius: 50%;
@@ -151,7 +158,7 @@
 .nbt-crest {
   position: absolute;
   left: 50%;
-  top: 48.5%;
+  top: 64.5%;
   width: 680px;
   height: 44px;
   mix-blend-mode: screen;
