@@ -1,11 +1,11 @@
 {
-  "asset_id": "4974cdf2-13e7-409b-a781-011477cb5d3f",
-  "content_type": "video/mp4",
-  "created_at": "2026-11-26T23:47:17Z",
+  "version": 1,
+  "asset_id": "ada6ae61-62be-40e5-810b-d65735521fb8",
+  "project_id": "6c99d8a5-af7d-4066-9a28-833b5185868f",
+  "url": "/__l5e/assets-v1/ada6ae61-62be-40e5-810b-d65735521fb8/nempo-rusa-bumper-kecil.mp4",
+  "r2_key": "a/v1/6c99d8a5-af7d-4066-9a28-833b5185868f/ada6ae61-62be-40e5-810b-d65735521fb8/nempo-rusa-bumper-kecil.mp4",
   "original_filename": "nempo-rusa-bumper-kecil.mp4",
-  "project_id": "6199f398-31cd-4fcc-a094-d01f68d72f84",
-  "r2_key": "a/v1/6199f398-31cd-4fcc-a094-d01f68d72f84/4974cdf2-13e7-409b-a781-011477cb5d3f/nempo-rusa-bumper-kecil.mp4",
   "size": 7749265,
-  "url": "/__l5e/assets-v1/4974cdf2-13e7-409b-a781-011477cb5d3f/nempo-rusa-bumper-kecil.mp4",
-  "version": 1
+  "content_type": "video/mp4",
+  "created_at": "2026-11-27T07:05:37Z"
 }

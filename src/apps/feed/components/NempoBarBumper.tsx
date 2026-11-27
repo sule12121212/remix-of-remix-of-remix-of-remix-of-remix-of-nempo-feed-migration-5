@@ -7,7 +7,7 @@ import './NempoBarBumper.css';
 export const NBB_LOOP_SECONDS = 8;
 
 /** NEMPO bumper: the Sundanese golden-antlered deer mascot walking around the 3D gold NEMPO logo. */
-export function NempoBarBumper() {
+export function NempoBarBumper({ src = rusaBumper.url, title = 'NEMPO' }: { src?: string; title?: string }) {
   const ref = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(true);
   const toggle = () => {
@@ -16,13 +16,13 @@ export function NempoBarBumper() {
   };
   const replay = () => { const v = ref.current; if (!v) return; v.currentTime = 0; void v.play(); setPlaying(true); };
   return (
-    <section className="nbb-tool" aria-label="Bumper acara NEMPO">
+    <section className="nbb-tool" aria-label={`Bumper acara ${title}`}>
       <div className="nbb-controls">
         <Button variant="outline" size="icon" aria-label={playing ? 'Jeda bumper' : 'Putar bumper'} onClick={toggle}>{playing ? <Pause /> : <Play />}</Button>
         <Button variant="outline" size="icon" aria-label="Putar ulang bumper" onClick={replay}><RotateCcw /></Button>
       </div>
       <div className="nbb-stage">
-        <video ref={ref} src={rusaBumper.url} autoPlay loop muted playsInline style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} aria-label="Rusa NEMPO berjalan mengelilingi logo NEMPO" />
+        <video ref={ref} src={src} autoPlay loop muted playsInline className="nbb-video" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} aria-label={`Rusa NEMPO dengan judul ${title}`} />
       </div>
     </section>
   );

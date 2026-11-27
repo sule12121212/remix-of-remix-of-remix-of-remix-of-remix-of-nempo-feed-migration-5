@@ -4,6 +4,7 @@
    live in src/styles.css; the whole clip is one 8 s CSS loop so the preview is a single artboard. */
 .nbb-tool { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; }
 .nbb-controls { display: flex; gap: 8px; }
+.nbb-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .nbb-stage {
   position: relative; container-type: size; width: min(94vw, 420px); aspect-ratio: 1080 / 1440;
   overflow: hidden; isolation: isolate; background: var(--nbb-sky-deep); color: var(--nbb-white);

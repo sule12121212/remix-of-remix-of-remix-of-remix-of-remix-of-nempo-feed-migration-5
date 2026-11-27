@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Bumper 5: tampilan bumper 4 dengan judul emas Bajidoran DJ; MP4 1080×1440 8 detik, putar/jeda/ulang dan unduhan identik diuji di ponsel/desktop.
+
 - [x] GGS Feed 67–68: samakan unduhan PNG dengan pratinjau dan uji kedua tombol unduh (3240×4320, file identik di layar kecil/besar).
 
 - [x] GGS Story 09: five exact offers and Paket Happy, Feed branding, photo background and PNG matching the preview.

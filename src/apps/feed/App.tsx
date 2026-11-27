@@ -234,6 +234,7 @@ import garutBeansOpeningPng from '@/assets/garut-beans/garut-beans-01-filosofi-l
 import { NempoStoryTodaySlide } from './components/NempoStoryTodaySlide';
 import nempoStoryBajidoranMp4 from '@/assets/nempo-story/nempo-story-02-bajidoran-lampu.mp4.asset.json';
 import nempoBarBumperMp4 from '@/assets/nempo-bumper/nempo-rusa-bumper-kecil.mp4.asset.json';
+import nempoBajidoranBumperMp4 from '@/assets/nempo-bumper/nempo-bumper-05-bajidoran-dj.mp4.asset.json';
 import nempoStoryBajidoranPng from '@/assets/nempo-story/nempo-story-02-bajidoran.png.asset.json';
 import ggsPovScrubPng from '@/assets/ggs-feed-53-pov-playlist-owner.png.asset.json';
 import ggsPromoAkhirTahunPng from '@/assets/ggs-feed-60-promo-akhir-tahun.png.asset.json';
@@ -290,7 +291,7 @@ import { NEMPO_CFD_INFO_SLIDE } from './components/nempo-cfd-info';
 import { NempoCfdInfoSlide } from './components/NempoCfdInfoSlide';
 import { NEMPO_MOMEN_DIGITAL_SLIDES, type NempoMomenDigitalSlideNumber } from './components/nempo-momen-digital';
 import { NempoMomenDigitalSlide } from './components/NempoMomenDigitalSlide';
-import { NEMPO_BAJIDORAN_FEST_SLIDE, NEMPO_BAJIDORAN_STORY_SLIDE } from './components/nempo-bajidoran-fest';
+import { NEMPO_BAJIDORAN_FEST_SLIDE, NEMPO_BAJIDORAN_STORY_SLIDE, nempoBajidoranFest } from './components/nempo-bajidoran-fest';
 import { NempoBajidoranFestSlide } from './components/NempoBajidoranFestSlide';
 import { NEMPO_HARI_GURU_SLIDE } from './components/nempo-hari-guru';
 import { NempoHariGuruSlide } from './components/NempoHariGuruSlide';
@@ -3264,6 +3265,7 @@ function App() {
     | 'bumper-logo'
     | 'bumper-dangdut'
     | 'bumper-nempo'
+    | 'bumper-bajidoran'
   >('nempo');
   const [activeSlide, setActiveSlide] = useState<FeedSlide>(32);
   const [activeClientSlide, setActiveClientSlide] = useState<ClientSlide>(3);
@@ -3285,7 +3287,8 @@ function App() {
   const isRundown = activeFeed === 'rundown';
   const isBumper = activeFeed === 'bumper' || activeFeed === 'bumper-logo' || activeFeed === 'bumper-dangdut';
   const isDangdutBumper = activeFeed === 'bumper-dangdut';
-  const isNempoBumper = activeFeed === 'bumper-nempo';
+  const isBajidoranBumper = activeFeed === 'bumper-bajidoran';
+  const isNempoBumper = activeFeed === 'bumper-nempo' || isBajidoranBumper;
   const isLogoBumper = activeFeed === 'bumper-logo';
   const isPhotobooth = activeFeed === 'photobooth';
   const isMemberCard = activeFeed === 'member-card';
@@ -3655,7 +3658,8 @@ function App() {
           <Button role="tab" aria-selected={activeFeed === 'bumper'} onClick={() => setActiveFeed('bumper')} className="mc-bumper-tab" variant="ghost" size="sm">Bumper Acara</Button>
           <Button role="tab" aria-selected={isLogoBumper} onClick={() => setActiveFeed('bumper-logo')} className="mc-bumper-tab" variant="ghost" size="sm">Bumper 2 · Opening Logo</Button>
           <Button role="tab" aria-selected={isDangdutBumper} onClick={() => setActiveFeed('bumper-dangdut')} className="mc-bumper-tab" variant="ghost" size="sm">Bumper 3 · Dangdut Halloween</Button>
-          <Button role="tab" aria-selected={isNempoBumper} onClick={() => setActiveFeed('bumper-nempo')} className="nbb-tab" variant="ghost" size="sm">Bumper 4 · NEMPO Bar</Button>
+          <Button role="tab" aria-selected={activeFeed === 'bumper-nempo'} onClick={() => setActiveFeed('bumper-nempo')} className="nbb-tab" variant="ghost" size="sm">Bumper 4 · NEMPO Bar</Button>
+          <Button role="tab" aria-selected={isBajidoranBumper} onClick={() => setActiveFeed('bumper-bajidoran')} className="nbb-tab" variant="ghost" size="sm">Bumper 5 · Bajidoran DJ</Button>
           <button
             type="button"
             role="tab"
@@ -3786,10 +3790,7 @@ function App() {
         )}
         {isNempoBumper && (
           <div className="mb-3 flex flex-col items-center gap-2">
-            <PrebuiltVideoDownload key="nempo-bar-bumper-mp4" src={nempoBarBumperMp4.url} fileName="Nempo-Bar-Bumper.mp4" />
-            <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
-              Video bumper 8 detik · 1080×1440 · papan nama NEMPO bergaya city-pop dengan lampu neon bergerak, berulang mulus, persis seperti pratinjau.
-            </p>
+            <PrebuiltVideoDownload key={activeFeed} src={isBajidoranBumper ? nempoBajidoranBumperMp4.url : nempoBarBumperMp4.url} fileName={isBajidoranBumper ? 'Nempo-Bumper-05-Bajidoran-DJ.mp4' : 'Nempo-Bar-Bumper.mp4'} />
           </div>
         )}
         {isGgsMen && ggsMenSlide === 11 && (
@@ -4739,7 +4740,7 @@ function App() {
         ) : isRundown ? (
           <MusiComedyRundown exportRef={exportRef} />
         ) : isNempoBumper ? (
-          <NempoBarBumper />
+          <NempoBarBumper key={activeFeed} src={isBajidoranBumper ? nempoBajidoranBumperMp4.url : nempoBarBumperMp4.url} title={isBajidoranBumper ? nempoBajidoranFest.title : 'NEMPO'} />
         ) : isDangdutBumper ? (
           <DangdutHalloweenBumper />
         ) : isLogoBumper ? (
