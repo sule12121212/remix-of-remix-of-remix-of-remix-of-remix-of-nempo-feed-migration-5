@@ -1,0 +1,80 @@
+/* NEMPO 51 — "Mau ajak siapa?" + request lagu, on slide 50's stage frame. Tokens: .nsd-root/.nar-root in styles.css. */
+.nar-root { position:relative; isolation:isolate; width:100%; aspect-ratio:3 / 4; overflow:hidden; container-type:inline-size; background:var(--nsd-stage); color:var(--nsd-white); font-family:'Poppins',sans-serif; }
+.nar-root * { letter-spacing:0; box-sizing:border-box; }
+.nar-root p,.nar-root h2,.nar-root ol { margin:0; padding:0; }
+.nar-bg { position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; pointer-events:none; }
+.nar-beams { position:absolute; inset:0; z-index:1; background:var(--nsd-beams); mix-blend-mode:screen; pointer-events:none; }
+.nar-glow { position:absolute; z-index:2; left:50%; top:22cqw; width:96cqw; height:70cqw; transform:translateX(-50%); background:var(--nsd-glow); filter:blur(1cqw); opacity:.75; pointer-events:none; }
+.nar-frame { position:absolute; inset:0; z-index:5; width:100%; height:100%; object-fit:fill; pointer-events:none; }
+.nar-header { z-index:7; }
+.nar-partners { display:flex; align-items:center; gap:2.5cqw; }
+.nar-saduli { width:13cqw; height:10cqw; object-fit:contain; }
+.nar-gsc { display:flex; width:8cqw; height:8cqw; padding:.6cqw; border-radius:1cqw; background:var(--nsd-cream); overflow:hidden; }
+.nar-gsc img { width:100%; height:100%; object-fit:contain; }
+
+.nar-invite { position:absolute; z-index:6; top:16.5cqw; left:12cqw; right:12cqw; display:flex; flex-direction:column; align-items:center; text-align:center; }
+.nar-event { width:29cqw; height:auto; transform:rotate(-3deg); filter:var(--nsd-title-drop); }
+.nar-question { position:relative; margin-top:.6cqw !important; font-family:'Shrikhand',serif; font-weight:400; font-size:8.8cqw; line-height:1; white-space:nowrap; color:var(--nar-question-fill); -webkit-text-stroke:.5cqw var(--nsd-white); paint-order:stroke fill; text-shadow:var(--nar-question-extrude); transform:rotate(-3deg); }
+/* Dark outline drawn behind the letters so the yellow never melts into a bright spotlight. */
+.nar-question::before { content:attr(data-text); position:absolute; left:0; top:0; z-index:-1; color:transparent; -webkit-text-stroke:1.7cqw var(--nar-question-outline); paint-order:stroke fill; text-shadow:none; }
+.nar-lead { margin-top:1.2cqw !important; font-size:3.4cqw; font-weight:800; font-style:italic; line-height:1.1; color:var(--nsd-white); text-shadow:0 .4cqw 1cqw color-mix(in srgb, var(--nsd-ink-dark) 70%, transparent); }
+.nar-comment { position:relative; margin-top:2cqw; display:flex; align-items:center; gap:2cqw; padding:.9cqw 1.2cqw .9cqw .9cqw; width:62cqw; border-radius:99cqw; background:var(--nar-comment-fill); border:.5cqw solid var(--nsd-gold); box-shadow:var(--nsd-pill-shadow); color:var(--nar-comment-ink); text-align:left; }
+.nar-comment-avatar { display:grid; place-items:center; width:6cqw; height:6cqw; flex:none; border-radius:50%; background:var(--nsd-pink-fill); color:var(--nsd-white); }
+.nar-comment-avatar svg { width:3.6cqw; height:3.6cqw; stroke-width:2.4; }
+.nar-comment-text { display:flex; flex-direction:column; flex:1; min-width:0; line-height:1.15; }
+.nar-comment-text b { font-size:3.4cqw; font-weight:800; white-space:nowrap; }
+.nar-comment-text small { font-size:2.1cqw; font-weight:600; color:var(--nar-muted-ink); white-space:nowrap; }
+.nar-comment-icon { display:grid; place-items:center; width:6cqw; height:6cqw; flex:none; border-radius:50%; background:var(--nsd-gold-edge); color:var(--nsd-ink-dark); }
+.nar-comment-icon svg { width:3.6cqw; height:3.6cqw; stroke-width:2.4; }
+.nar-arrow { margin-top:.2cqw; width:4cqw; height:4cqw; stroke-width:3; color:var(--nsd-yellow); filter:drop-shadow(0 .3cqw .6cqw color-mix(in srgb, var(--nsd-ink-dark) 70%, transparent)); }
+
+.nar-panel { position:absolute; z-index:8; left:16cqw; right:16cqw; top:63.5cqw; padding:5.4cqw 3cqw 1.8cqw; border-radius:3cqw; background:var(--nar-panel-fill); border:.8cqw solid var(--nsd-gold); box-shadow:var(--nar-panel-shadow); }
+.nar-ribbon { --nar-notch:2.2cqw; --nar-edge:.5cqw; position:absolute; top:-4cqw; left:50%; transform:translateX(-50%) rotate(-2deg); display:inline-flex; filter:var(--nsd-ribbon-drop); }
+.nar-ribbon-edge { display:flex; padding:var(--nar-edge); background:var(--nsd-gold-edge); clip-path:polygon(0 0,100% 0,calc(100% - var(--nar-notch)) 50%,100% 100%,0 100%,var(--nar-notch) 50%); }
+.nar-ribbon-fill { position:relative; display:block; padding:1cqw calc(var(--nar-notch) + 3cqw) 1.1cqw; background:var(--nsd-pink-fill); color:var(--nsd-white); font-size:3.4cqw; font-weight:800; line-height:1.2; white-space:nowrap; clip-path:polygon(0 0,100% 0,calc(100% - var(--nar-notch) + var(--nar-edge) * .5) 50%,100% 100%,0 100%,calc(var(--nar-notch) - var(--nar-edge) * .5) 50%); }
+.nar-ribbon-fill::after { content:''; position:absolute; left:0; right:0; top:0; height:48%; background:var(--nsd-shine); pointer-events:none; }
+.nar-songs { list-style:none; display:flex; flex-direction:column; gap:1.05cqw; }
+.nar-song { display:flex; align-items:center; gap:2.2cqw; padding:.7cqw 2.2cqw .7cqw .7cqw; border-radius:99cqw; background:var(--nar-row-fill); border:.25cqw solid var(--nar-row-line); }
+.nar-song-no { display:grid; place-items:center; width:4.8cqw; height:4.8cqw; flex:none; border-radius:50%; background:var(--nsd-gold-edge); color:var(--nsd-red); font-size:2.9cqw; font-weight:800; line-height:1; box-shadow:inset 0 -.35cqw 0 color-mix(in srgb, var(--nsd-ink-dark) 25%, transparent); }
+.nar-song-name { flex:1; font-size:3.6cqw; font-weight:800; line-height:1.1; white-space:nowrap; color:var(--nsd-white); }
+.nar-song-icon { width:3.2cqw; height:3.2cqw; flex:none; stroke-width:2.4; color:var(--nar-neon-pink); filter:drop-shadow(0 0 .8cqw var(--nar-neon-pink)); }
+.nar-note { margin-top:1.6cqw !important; text-align:center; font-size:2.5cqw; font-weight:700; font-style:italic; color:var(--nsd-yellow); }
+
+.nar-date { position:absolute; z-index:8; left:50%; top:113cqw; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:.3cqw; padding:1.2cqw 4cqw 1.3cqw; border-radius:99cqw; background:var(--nsd-blue-fill); border:.55cqw solid var(--nsd-gold); box-shadow:var(--nsd-pill-shadow); line-height:1.1; white-space:nowrap; }
+.nar-date b { font-size:2.9cqw; font-weight:800; }
+.nar-date span { display:flex; align-items:center; gap:.8cqw; font-size:2.3cqw; font-weight:700; color:var(--nsd-yellow); }
+.nar-date svg { width:2.6cqw; height:2.6cqw; fill:var(--nsd-yellow); stroke:var(--nsd-blue); }
+
+/* Live stage lights — every animation repeats within one 6 s loop so the recorded MP4 loops seamlessly. */
+.nar-spots { position:absolute; inset:0; z-index:4; pointer-events:none; overflow:hidden; }
+.nar-beam { position:absolute; width:16cqw; height:78cqw; margin-left:-8cqw; transform-origin:50% 0; transform:rotate(var(--nar-a)); clip-path:polygon(46% 0,54% 0,100% 100%,0 100%); filter:blur(.7cqw); mix-blend-mode:screen; opacity:.5; animation:nar-sweep 3s ease-in-out infinite; }
+.nar-beam--pink { background:var(--nar-beam-pink); }
+.nar-beam--gold { background:var(--nar-beam-gold); }
+.nar-frame-chase { position:absolute; inset:0; z-index:5; width:100%; height:100%; object-fit:fill; pointer-events:none; filter:var(--nar-chase-filter); mix-blend-mode:screen; -webkit-mask-image:var(--nar-chase-mask); mask-image:var(--nar-chase-mask); -webkit-mask-size:100% 300%; mask-size:100% 300%; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; animation:nar-chase 2s linear infinite; }
+.nar-lamps { position:absolute; inset:0; z-index:6; pointer-events:none; }
+.nar-lamp { position:absolute; width:9cqw; height:9cqw; margin:-4.5cqw 0 0 -4.5cqw; border-radius:50%; mix-blend-mode:screen; animation:nar-blink 1s steps(1,end) infinite, nar-flare 1.5s ease-in-out infinite; }
+.nar-lamp--pink { background:var(--nar-lamp-pink); }
+.nar-lamp--gold { background:var(--nar-lamp-gold); }
+.nar-glow { animation:nar-breathe 3s ease-in-out infinite; }
+.nar-question { animation:nar-bounce 1.5s ease-in-out infinite; }
+.nar-arrow { animation:nar-nudge 1s ease-in-out infinite; }
+.nar-song { animation:nar-row 6s linear infinite; }
+.nar-song:nth-child(2) { animation-delay:-4.8s; }
+.nar-song:nth-child(3) { animation-delay:-3.6s; }
+.nar-song:nth-child(4) { animation-delay:-2.4s; }
+.nar-song:nth-child(5) { animation-delay:-1.2s; }
+.nar-song-icon { animation:nar-note 1s ease-in-out infinite; }
+
+@keyframes nar-sweep { 0%,100% { transform:rotate(calc(var(--nar-a) - 14deg)); } 50% { transform:rotate(calc(var(--nar-a) + 14deg)); } }
+@keyframes nar-chase { 0% { -webkit-mask-position:0 100%; mask-position:0 100%; } 100% { -webkit-mask-position:0 0; mask-position:0 0; } }
+@keyframes nar-blink { 0% { opacity:1; } 50% { opacity:.35; } }
+@keyframes nar-flare { 0%,100% { transform:scale(.8); } 50% { transform:scale(1.15); } }
+@keyframes nar-breathe { 0%,100% { opacity:.6; } 50% { opacity:.9; } }
+@keyframes nar-bounce { 0%,100% { transform:rotate(-3deg) scale(1); } 50% { transform:rotate(-3deg) scale(1.045); } }
+@keyframes nar-nudge { 0%,100% { transform:translateY(0); } 50% { transform:translateY(.8cqw); } }
+@keyframes nar-row { 0%,18% { background:var(--nar-row-hot); box-shadow:0 0 2cqw var(--nar-row-glow); } 19.5%,100% { background:var(--nar-row-fill); box-shadow:none; } }
+@keyframes nar-note { 0%,100% { transform:translateY(0) rotate(0); } 50% { transform:translateY(-.6cqw) rotate(-10deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .nar-beam,.nar-frame-chase,.nar-lamp,.nar-glow,.nar-question,.nar-arrow,.nar-song,.nar-song-icon { animation:none; }
+}

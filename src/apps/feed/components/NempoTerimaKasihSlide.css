@@ -1,0 +1,33 @@
+/* NEMPO 53 — after-event "Hatur Nuhun!" in slide 52's lighting-truss frame, transparent (text only). Frame, chase and lamp layers reuse the nar- classes; tokens in styles.css.
+   The compound .nte-root.nar-root selector outspecifies the stage background in NempoAjakRequestSlide.css. */
+.nte-root.nar-root { background:transparent; }
+/* .nar-root p resets padding, so padded paragraphs below are prefixed with .nte-root. */
+.nte-root p,.nte-root h2 { margin:0; }
+/* Preview-only checkerboard so the empty middle reads as see-through; the PNG capture turns it off. */
+.nte-root.nte-root--checker { background-color:var(--nte-check-a); background-image:linear-gradient(45deg,var(--nte-check-b) 25%,transparent 25%,transparent 75%,var(--nte-check-b) 75%),linear-gradient(45deg,var(--nte-check-b) 25%,transparent 25%,transparent 75%,var(--nte-check-b) 75%); background-size:5cqw 5cqw; background-position:0 0,2.5cqw 2.5cqw; }
+
+.nte-header { top:8.5cqw; left:9cqw; right:9cqw; }
+.nte-header .kmt-name { color:var(--nsd-white); text-shadow:var(--nte-soft-shadow); }
+
+.nte-copy { position:absolute; z-index:8; bottom:10cqw; left:9cqw; right:9cqw; display:flex; flex-direction:column; align-items:center; text-align:center; }
+
+.nte-root .nte-kicker { padding:.8cqw 3.6cqw .9cqw; border-radius:99cqw; background:var(--nsd-red-fill); border:.45cqw solid var(--nsd-gold); box-shadow:var(--nsd-pill-shadow); font-size:2.4cqw; font-weight:800; font-style:italic; line-height:1.1; color:var(--nsd-white); white-space:nowrap; }
+
+.nte-headline { margin-top:1.4cqw !important; display:flex; flex-direction:row; align-items:baseline; gap:2.4cqw; font-family:'Shrikhand',serif; font-weight:400; font-size:8.6cqw; line-height:.98; color:var(--nar-question-fill); transform:rotate(-3deg); }
+.nte-headline > span { position:relative; white-space:nowrap; -webkit-text-stroke:.55cqw var(--nsd-white); paint-order:stroke fill; text-shadow:var(--nte-headline-extrude); }
+.nte-headline > span + span { color:var(--nte-pink); }
+/* Dark outline behind the letters so the yellow stays readable over any footage. */
+.nte-headline > span::before { content:attr(data-text); position:absolute; left:0; top:0; z-index:-1; color:transparent; -webkit-text-stroke:1.8cqw var(--nar-question-outline); paint-order:stroke fill; text-shadow:none; }
+
+.nte-panel { position:relative; margin-top:3.6cqw; width:62cqw; padding:3.6cqw 3.4cqw 2cqw; border-radius:3cqw; background:var(--nar-panel-fill); border:.8cqw solid var(--nsd-gold); box-shadow:var(--nar-panel-shadow); }
+.nte-ribbon { --nte-notch:2.2cqw; --nte-edge:.5cqw; position:absolute; top:-3.8cqw; left:50%; transform:translateX(-50%) rotate(-2deg); display:inline-flex; filter:var(--nsd-ribbon-drop); }
+.nte-ribbon-edge { display:flex; padding:var(--nte-edge); background:var(--nsd-gold-edge); clip-path:polygon(0 0,100% 0,calc(100% - var(--nte-notch)) 50%,100% 100%,0 100%,var(--nte-notch) 50%); }
+.nte-ribbon-fill { position:relative; display:block; padding:1cqw calc(var(--nte-notch) + 3cqw) 1.1cqw; background:var(--nsd-pink-fill); color:var(--nsd-white); font-size:2.7cqw; font-weight:800; line-height:1.2; white-space:nowrap; clip-path:polygon(0 0,100% 0,calc(100% - var(--nte-notch) + var(--nte-edge) * .5) 50%,100% 100%,0 100%,calc(var(--nte-notch) - var(--nte-edge) * .5) 50%); }
+.nte-ribbon-fill::after { content:''; position:absolute; left:0; right:0; top:0; height:48%; background:var(--nsd-shine); pointer-events:none; }
+.nte-body { font-size:2.5cqw; font-weight:700; line-height:1.38; color:var(--nsd-white); text-wrap:balance; }
+
+
+.nte-root .nte-date { margin-top:1.8cqw !important; width:max-content; display:flex; flex-direction:column; align-items:center; gap:.4cqw; padding:1.1cqw 4.6cqw 1.2cqw; border-radius:3.4cqw; background:var(--nsd-blue-fill); border:.55cqw solid var(--nsd-gold); box-shadow:var(--nsd-pill-shadow); line-height:1.1; white-space:nowrap; }
+.nte-date b { font-size:2.3cqw; font-weight:800; color:var(--nsd-white); }
+.nte-date span { display:flex; align-items:center; gap:.7cqw; font-size:2cqw; font-weight:700; color:var(--nsd-yellow); }
+.nte-date svg { width:2.5cqw; height:2.5cqw; }

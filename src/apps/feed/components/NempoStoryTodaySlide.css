@@ -1,0 +1,74 @@
+/* Nempo Story — the one Story slide: slide 52's green stage, the owner's Bajidoran DJ poster and
+   the "Hari Ini" date pill. Tokens: nsd and nar classes in styles.css, kmt classes in
+   KalaMudaRecruitSlide.css. The compound .nst-root.nar-root selector outspecifies the 3:4 stage
+   rule that is loaded after this file. */
+.nst-root.nar-root {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 45vh);
+  max-width: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  container-type: inline-size;
+  background: var(--nsd-stage);
+  color: var(--nsd-white);
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 24px 70px color-mix(in srgb, #04140a 35%, transparent);
+}
+.nst-root * { letter-spacing: 0; box-sizing: border-box; }
+.nst-root p, .nst-root h2 { margin: 0; padding: 0; }
+
+/* Backdrop layers (bg photo, beams, glow) never receive clicks. */
+.nst-backdrop { pointer-events: none; }
+
+/* Header: NEMPO.ID × Kala Muda on the left, Saduli + Good Story Cafe on the right.
+   Lowered so it doesn't hug the top edge; everything below follows. */
+.nst-header { z-index: 7; top: 10cqw; left: 6cqw; right: 6cqw; }
+.nst-header .kmt-logo { width: 9cqw; height: 9cqw; }
+.nst-header .kmt-name strong { font-size: 2.6cqw; }
+.nst-header .kmt-name span { font-size: 1.9cqw; }
+.nst-partners { gap: 2.2cqw; }
+.nst-partners .nar-saduli { width: 14cqw; height: 10.8cqw; }
+.nst-partners .nar-gsc { width: 9cqw; height: 9cqw; }
+
+/* Poster with its date pill under it. */
+.nst-poster-wrap {
+  position: absolute; z-index: 5; left: 0; right: 0; top: 27cqw; bottom: 3cqw;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4cqw;
+}
+.nst-poster {
+  display: block; width: 88cqw; height: auto; aspect-ratio: 3 / 4; border-radius: 3cqw;
+  box-shadow: 0 2.4cqw 6cqw rgb(0 0 0 / .45);
+}
+
+/* Date pill: symmetric capsule, text optically centred. */
+.nst-kicker {
+  display: flex;
+  align-items: center;
+  gap: 1.6cqw;
+  padding: .7cqw 3.2cqw .8cqw;
+  border-radius: 99cqw;
+  background: var(--nsd-red-fill);
+  border: .45cqw solid var(--nsd-gold);
+  box-shadow: var(--nsd-pill-shadow);
+  font-size: 2.6cqw;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.1;
+  color: var(--nsd-cream);
+  white-space: nowrap;
+}
+.nst-kicker-dot { width: .9cqw; height: .9cqw; border-radius: 50%; background: var(--nsd-yellow); }
+.nst-kicker--today {
+  box-sizing: border-box; justify-content: center; gap: 2.2cqw;
+  height: 9cqw; padding: 0 5cqw !important; border-width: .55cqw;
+  font-size: 3.6cqw; line-height: 1; margin: 0 !important;
+}
+.nst-kicker--today b { font-weight: 900; text-transform: uppercase; letter-spacing: .06em; color: var(--nsd-yellow); }
+.nst-kicker--today .nst-kicker-dot { width: 1.2cqw; height: 1.2cqw; flex: none; }
+
+/* Corner spotlights only (no truss): soft beams sweep over the poster (screen blend). */
+.nst-bj-spots { z-index: 6; }
+.nst-bj-spots .nar-beam { height: 150cqw; width: 34cqw; margin-left: -17cqw; opacity: .45; filter: blur(2.2cqw); clip-path: polygon(47% 0,53% 0,100% 100%,0 100%); -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent); mask-image: linear-gradient(to bottom, #000 30%, transparent); }
+.nst-bj-lamps .nar-lamp { width: 12cqw; height: 12cqw; margin: -6cqw 0 0 -6cqw; }
+.nst-bj-lamps { z-index: 7; }

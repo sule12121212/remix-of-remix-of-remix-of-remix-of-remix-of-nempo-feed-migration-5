@@ -1,0 +1,96 @@
+{
+  "source": "github:nempocreative/remix-of-remix-of-remix-of-remix-of-remix-of-nempo-feed-migration-5-54f9b1b3@06520718",
+  "capabilities": [
+    {
+      "capability": "code",
+      "source": "TanStack Start app, sub-app src/apps/feed mounted at /nempo-feed",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "schema",
+      "source": "none (no database, no supabase, no drizzle)",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "records",
+      "source": "none",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "auth_identities",
+      "source": "none (no login)",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "authorization",
+      "source": "none",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "bundled_media",
+      "source": "binary images/videos/fonts committed in src/assets and public/",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "cdn_media_pointers",
+      "source": "199 .asset.json pointers owned by other Lovable projects (9d460b8a:169, 5d83d26d:24, 102f7255:6)",
+      "outcome": "migrate",
+      "status": "blocked",
+      "next_action": "bytes not readable from this project (scoped storage, previews 401, projects not in workspace); need old project's published URL or owner re-upload, then lovable-assets create"
+    },
+    {
+      "capability": "external_providers",
+      "source": "Google Fonts link only",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "public_endpoints",
+      "source": "none",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "schedules",
+      "source": "none",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "secrets",
+      "source": "none referenced",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "cutover",
+      "source": "n/a",
+      "outcome": "none",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "verification",
+      "source": "build, tests, routes",
+      "outcome": "verify",
+      "status": "verified",
+      "next_action": "49 test files / 206 tests pass; /nempo-feed renders; CDN media still 404 until pointers re-uploaded"
+    }
+  ]
+}

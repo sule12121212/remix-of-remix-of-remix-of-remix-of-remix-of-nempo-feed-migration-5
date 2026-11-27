@@ -1,0 +1,33 @@
+/* NEMPO 48 — 3:4 feed-size sawer clip; same natural palette and lettering as slides 46 and 47. */
+.nbf-root.kmt-root { position:relative; isolation:isolate; width:100%; aspect-ratio:3 / 4; overflow:hidden; container-type:inline-size; background:var(--nbf-night); color:var(--nbf-cream); font-family:'DM Sans',sans-serif; }
+.nbf-root.nbf-root--overlay { background:transparent; }
+.nbf-root * { letter-spacing:0; box-sizing:border-box; }
+.nbf-root p,.nbf-root h2 { margin:0; padding:0; }
+.nbf-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.nbf-shade { position:absolute; inset:0; z-index:1; pointer-events:none; background:var(--nbf-shade); }
+.nbf-header { z-index:6; top:5.5cqw; left:6cqw; right:6cqw; }
+.nbf-partners { display:flex; align-items:center; gap:2.5cqw; }
+.nbf-saduli { width:13cqw; height:10cqw; object-fit:contain; }
+.nbf-gsc { display:flex; width:8cqw; height:8cqw; padding:.6cqw; border-radius:1cqw; background:var(--nbf-cream); overflow:hidden; }
+.nbf-gsc img { width:100%; height:100%; object-fit:contain; }
+
+.nbf-hero { position:absolute; z-index:5; top:21cqw; left:6cqw; right:6cqw; display:flex; flex-direction:column; align-items:center; text-align:center; text-shadow:var(--nbf-text-shadow); }
+.nbf-title { font-family:'Bricolage Grotesque',sans-serif; font-size:12cqw; font-weight:800; line-height:1.05; white-space:nowrap; }
+.nbf-title span { font-family:'Cormorant Garamond',serif; font-weight:500; font-style:italic; color:var(--nbf-accent); }
+.nbf-tagline { margin-top:2.4cqw !important; font-size:2.6cqw; font-weight:400; line-height:1.45; color:var(--nbf-soft); text-shadow:var(--nbf-text-shadow); }
+
+.nbf-bottom { position:absolute; z-index:5; left:6cqw; right:6cqw; bottom:6.5cqw; display:flex; flex-direction:column; align-items:center; gap:2.6cqw; }
+.nbf-kicker { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:600; font-size:5.4cqw; line-height:1; color:var(--nbf-cream); text-shadow:var(--nbf-text-shadow); }
+.nbf-ticket { width:100%; height:21cqw; display:grid; grid-template-columns:21cqw auto 1fr; background:var(--nbf-cream); color:var(--nbf-ink); border-radius:1.2cqw; }
+.nbf-date { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:.7cqw; line-height:1; }
+.nbf-weekday { font-size:2.4cqw; font-weight:700; }
+.nbf-date strong { font-family:'Bricolage Grotesque',sans-serif; font-size:9cqw; font-weight:700; }
+.nbf-month { font-size:1.9cqw; font-weight:500; }
+.nbf-perf { width:0; margin:2.8cqw 0; border-left:1px solid var(--nbf-perf); }
+.nbf-venue { display:flex; flex-direction:column; justify-content:center; gap:1cqw; padding:0 3.4cqw; line-height:1.1; min-width:0; }
+.nbf-label { display:inline-flex; align-items:center; gap:.8cqw; font-size:2cqw; color:var(--nbf-ink-soft); }
+.nbf-label svg { width:2.3cqw; height:2.3cqw; }
+.nbf-venue strong { font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:4.8cqw; line-height:1.15; }
+.nbf-address { font-size:2.2cqw; color:var(--nbf-ink-soft); }
+.nbf-info { margin-top:.4cqw; font-size:2.2cqw; color:var(--nbf-ink-soft); white-space:nowrap; }
+.nbf-info b { font-weight:700; color:var(--nbf-ink); }

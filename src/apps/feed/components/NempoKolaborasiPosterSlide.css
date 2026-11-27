@@ -1,0 +1,67 @@
+/* NEMPO Feed slide 56 — bright playful collab poster over the coconut-stage artwork. Colors in src/styles.css (.nkp-root). */
+.nkp-root {
+  position: relative; isolation: isolate; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;
+  container-type: inline-size; background: var(--nkp-sky); color: var(--nkp-white);
+  font-family: 'Fredoka', 'Poppins', sans-serif;
+}
+.nkp-root * { box-sizing: border-box; }
+.nkp-root p, .nkp-root h2, .nkp-root ol { margin: 0; padding: 0; }
+.nkp-root ol { list-style: none; }
+.nkp-root a { text-decoration: none; color: inherit; }
+
+/* Coconut stage artwork, sitting low so the sky above holds the title; its top edge melts into the sky fill */
+.nkp-photo {
+  position: absolute; z-index: 0; left: 0; top: 35cqw; width: 100%; height: auto; display: block;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 6cqw); mask-image: linear-gradient(180deg, transparent 0, #000 6cqw);
+}
+
+/* Shared Nempo Feed header (same as the other slides): keep its own fonts and colors */
+.nkp-root .kmt-header { z-index: 8; font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif; }
+.nkp-root .kmt-header * { letter-spacing: initial; }
+.nkp-root .kmt-name { text-shadow: var(--nkp-text-pop); }
+.nkp-root .kmt-badge { background: color-mix(in srgb, var(--nkp-navy) 60%, transparent); }
+
+/* AI-lettered bouncy white title, no shadow */
+.nkp-title { position: absolute; z-index: 5; top: 16cqw; left: 0; right: 0; display: flex; justify-content: center; }
+.nkp-title-art { display: block; width: 48cqw; height: auto; pointer-events: none; user-select: none; }
+.nkp-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Sticker tagline */
+.nkp-root .nkp-tagline {
+  position: absolute; z-index: 6; top: 41.5cqw; left: 50%; transform: translateX(-50%) rotate(-3deg);
+  padding: 1.4cqw 6cqw 1.6cqw; border-radius: 99cqw; background: var(--nkp-sun); color: var(--nkp-navy);
+  font-weight: 700; font-size: 4.4cqw; line-height: 1; white-space: nowrap; box-shadow: 0 .6cqw 0 var(--nkp-sun-deep);
+}
+
+/* Release line — tilted the same way as the sticker tagline above it */
+.nkp-release {
+  position: absolute; z-index: 6; top: 50.5cqw; left: 0; right: 0; text-align: center;
+  transform: rotate(-3deg);
+  font-size: 2.5cqw; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; text-shadow: var(--nkp-text-pop);
+}
+
+/* White card: benefits and steps above the shared slide 35 footer */
+.nkp-billing {
+  position: absolute; z-index: 7; left: 5cqw; right: 5cqw; bottom: 15cqw; padding: 1.8cqw 2.6cqw 2cqw;
+  display: flex; flex-direction: column; align-items: center; gap: 1.2cqw;
+  background: var(--nkp-card); border-radius: 4cqw; box-shadow: var(--nkp-pop); color: var(--nkp-navy);
+}
+.nkp-credits { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .9cqw; font-size: 2.05cqw; font-weight: 600; line-height: 1; }
+.nkp-credits strong { font-weight: 700; color: var(--nkp-blue-deep); margin-right: .4cqw; font-size: 2.5cqw; }
+.nkp-credits span { padding: .7cqw 1.6cqw; border-radius: 99cqw; background: color-mix(in srgb, var(--nkp-sun) 55%, var(--nkp-white)); }
+.nkp-credits span:nth-of-type(2) { background: color-mix(in srgb, var(--nkp-pink) 40%, var(--nkp-white)); }
+.nkp-credits span:nth-of-type(3) { background: color-mix(in srgb, var(--nkp-mint) 45%, var(--nkp-white)); }
+.nkp-credits span:nth-of-type(4) { background: color-mix(in srgb, var(--nkp-lilac) 45%, var(--nkp-white)); }
+
+.nkp-steps-label { font-size: 2.1cqw; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--nkp-sun-deep); }
+.nkp-steps { display: flex; align-items: center; justify-content: center; gap: 2.2cqw; flex-wrap: nowrap; white-space: nowrap; }
+.nkp-steps li { display: flex; align-items: center; gap: .9cqw; font-size: 2.55cqw; font-weight: 600; color: var(--nkp-navy); }
+.nkp-steps li span {
+  flex: none; display: grid; place-items: center; width: 3.8cqw; height: 3.8cqw; border-radius: 50%;
+  background: var(--nkp-sun); box-shadow: 0 .4cqw 0 var(--nkp-sun-deep); font-size: 2.4cqw; font-weight: 700; color: var(--nkp-navy);
+}
+.nkp-steps li:nth-child(2) span { background: var(--nkp-pink); box-shadow: 0 .4cqw 0 color-mix(in srgb, var(--nkp-pink) 60%, var(--nkp-navy)); color: var(--nkp-white); }
+.nkp-steps li:nth-child(3) span { background: var(--nkp-mint); box-shadow: 0 .4cqw 0 color-mix(in srgb, var(--nkp-mint) 60%, var(--nkp-navy)); }
+
+/* The shared NempoFooter supplies the same .kmt-footer pills as slide 35. */
+.nkp-root .kmt-footer { z-index: 8; font-family: 'DM Sans', sans-serif; }

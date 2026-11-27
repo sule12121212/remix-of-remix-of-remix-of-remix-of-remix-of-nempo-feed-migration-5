@@ -1,0 +1,18 @@
+.ggmi-root{position:relative;isolation:isolate;width:100%;aspect-ratio:3/4;overflow:hidden;container-type:inline-size;background:var(--ggmi-background);color:var(--ggmi-ink);font-family:'DM Sans',sans-serif}
+.ggmi-root *{box-sizing:border-box;letter-spacing:0}
+.ggmi-photo,.ggmi-watermark{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ggmi-watermark{z-index:3;pointer-events:none;object-fit:contain}
+.ggmi-title{position:absolute;top:22cqw;left:0;right:0;margin:0;text-align:center;font-family:'Cormorant Garamond',serif;font-size:10.5cqw;font-style:italic;font-weight:600;line-height:1;color:var(--ggmi-light)}
+.ggmi-card{position:absolute;z-index:2;top:44cqw;left:22cqw;right:22cqw;display:flex;flex-direction:column;align-items:center;text-align:center;mix-blend-mode:multiply}
+.ggmi-guest{margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:5.5cqw;font-weight:600;line-height:1.1;color:var(--ggmi-green)}
+.ggmi-body{margin:2.4cqw 0 0;font-family:'Cormorant Garamond',serif;font-size:2.85cqw;font-weight:500;line-height:1.35}
+.ggmi-body span{display:block;white-space:nowrap}
+.ggmi-edition{margin:3.2cqw 0 1.8cqw;padding:1.4cqw 0;border-top:.14cqw solid var(--ggmi-brass);border-bottom:.14cqw solid var(--ggmi-brass);width:39cqw;font-size:1.9cqw;font-weight:600;line-height:1.1;text-transform:uppercase}
+.ggmi-promos{margin:0;width:100%}
+.ggmi-offer+.ggmi-offer{margin-top:2.6cqw}
+.ggmi-offer dt{font-family:'Cormorant Garamond',serif;font-size:3.7cqw;font-weight:600;line-height:1.1}
+.ggmi-offer dd{margin:.6cqw 0 0;display:flex;align-items:baseline;justify-content:center;gap:1cqw;font-family:'Cormorant Garamond',serif;color:var(--ggmi-green);font-variant-numeric:lining-nums;line-height:1}
+.ggmi-offer small{font-size:3.7cqw;font-style:italic}
+.ggmi-offer b{font-size:9.6cqw;font-weight:600}
+.ggmi-closer{margin:3cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:3.2cqw;font-weight:600;line-height:1.2;white-space:nowrap}
+.ggmi-cta{margin:2.8cqw 0 0;padding:1.4cqw 0;width:38cqw;border-top:.14cqw solid var(--ggmi-brass);border-bottom:.14cqw solid var(--ggmi-brass);font-size:1.7cqw;font-weight:700;line-height:1.1;text-transform:uppercase;color:var(--ggmi-green)}

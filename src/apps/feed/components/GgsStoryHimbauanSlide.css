@@ -1,0 +1,29 @@
+.ggsth-root{position:relative;isolation:isolate;width:min(100%,45vh);max-width:100%;aspect-ratio:9/16;overflow:hidden;container-type:inline-size;background:var(--ggsth-blush);font-family:'DM Sans',sans-serif;color:var(--ggsth-ink);box-shadow:0 24px 70px color-mix(in srgb,var(--ggsth-ink) 22%,transparent)}
+/* The 3:4 photo sits on the bottom (top at 44.4cqw); its plain blush top fades into the root background. */
+.ggsth-photo{position:absolute;left:0;bottom:0;width:100%;height:133.33cqw;object-fit:cover;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22cqw);mask-image:linear-gradient(180deg,transparent 0,#000 22cqw)}
+.ggsth-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:var(--ggsth-top-shade)}
+
+.ggsth-head{position:absolute;z-index:2;left:0;right:0;top:45cqw;display:flex;flex-direction:column;align-items:center;text-align:center}
+.ggsth-kicker{margin:0;font-size:2.5cqw;font-weight:600;line-height:1;letter-spacing:.34em;padding-left:.34em;text-transform:uppercase;color:var(--ggsth-brass)}
+.ggsth-title{margin:1.4cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:15cqw;line-height:1;color:var(--ggsth-ink)}
+.ggsth-rule{margin-top:2.4cqw;width:12cqw;height:.3cqw;background:var(--ggsth-brass)}
+
+.ggsth-ticket{position:absolute;z-index:2;margin:0;display:flex;align-items:stretch;background:var(--ggsth-paper);border-radius:.8cqw;box-shadow:var(--ggsth-ticket-shadow);overflow:hidden}
+.ggsth-ticket--left{left:5cqw;top:89cqw;transform:rotate(-8deg)}
+.ggsth-ticket--right{right:5cqw;top:95cqw;transform:rotate(7deg)}
+.ggsth-ticket-text{display:flex;align-items:center;padding:1.5cqw 2.2cqw;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:3.1cqw;line-height:1;white-space:nowrap;color:var(--ggsth-ink)}
+.ggsth-ticket-stub{display:flex;align-items:center;padding:0 1.6cqw;border-left:.25cqw dashed var(--ggsth-paper);font-size:1.5cqw;font-weight:700;line-height:1;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;background:var(--ggsth-brass);color:var(--ggsth-paper)}
+
+/* Same placement on the newspaper as feed slide 50, shifted down by the photo's 44.4cqw offset. */
+.ggsth-paper{position:absolute;z-index:2;left:19.5cqw;right:19.5cqw;top:119.9cqw;display:flex;flex-direction:column;align-items:center;text-align:center;color:var(--ggsth-ink);mix-blend-mode:multiply}
+.ggsth-mast{margin:0;width:100%;display:flex;justify-content:space-between;align-items:baseline;padding-bottom:.9cqw;border-bottom:.18cqw solid var(--ggsth-rule)}
+.ggsth-mast b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:2.6cqw;letter-spacing:.18em;text-transform:uppercase}
+.ggsth-mast span{font-size:1.5cqw;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ggsth-muted)}
+.ggsth-headline{margin:1.8cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:6.6cqw;line-height:1;color:var(--ggsth-rose)}
+.ggsth-body{margin:1.6cqw 0 0;max-width:56cqw;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.9cqw;line-height:1.24;text-wrap:balance;color:var(--ggsth-ink)}
+.ggsth-deal{margin:1.6cqw 0 0;display:flex;align-items:baseline;gap:1.6cqw;color:var(--ggsth-rose)}
+.ggsth-deal span{font-size:1.9cqw;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--ggsth-brass)}
+.ggsth-deal b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:6.4cqw;line-height:1}
+.ggsth-closer{margin:1.2cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:4.2cqw;line-height:1;color:var(--ggsth-ink)}
+
+.ggsth-overlay{position:absolute;inset:0;z-index:3;width:100%;height:100%;object-fit:contain;pointer-events:none}

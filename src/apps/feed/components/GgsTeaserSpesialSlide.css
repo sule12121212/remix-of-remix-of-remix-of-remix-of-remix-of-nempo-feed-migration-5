@@ -1,0 +1,39 @@
+.ggts-root{position:relative;isolation:isolate;width:100%;aspect-ratio:3/4;overflow:hidden;container-type:inline-size;background:var(--ggts-bg);font-family:'DM Sans',sans-serif;color:var(--ggts-ink)}
+.ggts-root::before{content:'';position:absolute;inset:0;background:var(--ggts-glow);pointer-events:none}
+.ggts-root *{box-sizing:border-box}
+.ggts-root p{margin:0}
+.ggts-orbit{position:absolute;border:.24cqw solid var(--ggts-line);border-radius:50%;pointer-events:none}
+.ggts-orbit--one{width:54cqw;height:54cqw;right:-28cqw;top:17cqw}
+.ggts-orbit--two{width:40cqw;height:40cqw;left:-25cqw;bottom:14cqw}
+
+/* Title */
+.ggts-head{position:absolute;z-index:2;left:6cqw;right:6cqw;top:14cqw;display:flex;flex-direction:column;align-items:center;text-align:center}
+.ggts-title{margin:0;display:flex;flex-direction:column;align-items:center;line-height:.88}
+.ggts-something{font-family:'Shrikhand',cursive;font-size:7.6cqw;font-weight:400;letter-spacing:.005em;color:var(--ggts-plum)}
+.ggts-special{margin-top:.4cqw;font-family:'Yellowtail',cursive;font-size:9cqw;font-weight:400;letter-spacing:0;color:var(--ggts-pink);transform:rotate(-4deg);text-shadow:var(--ggts-title-shadow)}
+.ggts-root .ggts-audience{margin-top:1.2cqw;font-family:'Playfair Display',Georgia,serif;font-size:3cqw;font-style:italic;font-weight:600;color:var(--ggts-ink-soft)}
+
+/* Website sneak peek: the owner's screenshots on two portrait tablets */
+.ggts-web{position:absolute;z-index:2;left:0;right:0;top:36.8cqw;height:48cqw}
+.ggts-tablet{position:absolute;top:1.6cqw;width:33.4cqw;margin:0;padding:1.2cqw;border-radius:3.2cqw;background:var(--ggts-bezel);box-shadow:var(--ggts-device-shadow),inset 0 0 0 .25cqw var(--ggts-bezel-edge)}
+.ggts-tablet--home{left:12.5cqw;transform:rotate(-4.5deg)}
+.ggts-tablet--nail{right:12.5cqw;top:2.6cqw;transform:rotate(4deg)}
+.ggts-camera{position:absolute;left:50%;top:.42cqw;width:.5cqw;height:.5cqw;margin-left:-.25cqw;border-radius:50%;background:var(--ggts-bezel-edge)}
+.ggts-shot{display:block;width:100%;aspect-ratio:1334/1868;height:auto;border-radius:2cqw;object-fit:cover;background:var(--ggts-cream)}
+.ggts-label{position:absolute;left:50%;bottom:-1.5cqw;transform:translateX(-50%);padding:.7cqw 2.2cqw .8cqw;border-radius:3cqw;background:var(--ggts-white);color:var(--ggts-plum);font-size:2.05cqw;font-weight:800;white-space:nowrap;box-shadow:var(--ggts-card-shadow);border:.2cqw solid var(--ggts-card-line)}
+
+.ggts-root .ggts-peek{position:absolute;z-index:2;left:5cqw;top:-1.4cqw;padding:.5cqw 2.2cqw .9cqw;border-radius:3cqw;background:var(--ggts-pink);font-family:'Yellowtail',cursive;font-size:3.6cqw;line-height:1;color:var(--ggts-white);transform:rotate(-7deg);box-shadow:0 .8cqw 1.8cqw color-mix(in srgb,#8e2c52 28%,transparent)}
+
+/* Benefits as chips */
+.ggts-chips{position:absolute;z-index:2;left:6cqw;right:6cqw;top:88cqw;margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw 1.4cqw}
+.ggts-chip{display:flex;min-height:6cqw;align-items:center;gap:1.2cqw;padding:.75cqw 2cqw .75cqw .8cqw;border:.2cqw solid var(--ggts-card-line);border-radius:4cqw;background:var(--ggts-card);box-shadow:var(--ggts-card-shadow);font-size:2.3cqw;font-weight:700;line-height:1.15;color:var(--ggts-ink)}
+.ggts-chip--more{grid-column:1/-1;justify-self:center;border-color:transparent;font-size:2.7cqw;background:var(--ggts-plum);color:var(--ggts-white);font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700}
+.ggts-chip--more .ggts-icon{background:var(--ggts-pink);color:var(--ggts-white)}
+.ggts-icon{display:grid;place-items:center;flex:0 0 auto;width:4.4cqw;height:4.4cqw;border-radius:50%;background:var(--ggts-icon-bg);color:var(--ggts-pink-deep)}
+.ggts-icon svg{width:2.5cqw;height:2.5cqw}
+
+.ggts-cta{position:absolute;z-index:2;left:6cqw;right:6cqw;top:112.3cqw;display:flex;align-items:center;justify-content:center;gap:1.5cqw;color:var(--ggts-plum)}
+.ggts-instagram{display:grid;place-items:center;flex:0 0 auto;width:4.6cqw;height:4.6cqw;border-radius:50%;background:var(--ggts-plum);color:var(--ggts-bg)}
+.ggts-instagram svg{width:2.7cqw;height:2.7cqw}
+.ggts-cta p{margin:0;font-size:2.55cqw;font-weight:800;line-height:1.2;white-space:nowrap}
+.ggts-watermark{position:absolute;inset:0;z-index:3;width:100%;height:100%;object-fit:contain;pointer-events:none}

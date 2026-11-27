@@ -1,0 +1,27 @@
+.ggmm-root{position:relative;isolation:isolate;width:100%;aspect-ratio:3/4;overflow:hidden;container-type:inline-size;background:var(--ggmm-blush);font-family:'DM Sans',sans-serif;color:var(--ggmm-ink)}
+.ggmm-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+
+.ggmm-head{position:absolute;z-index:2;left:0;right:0;top:20.5cqw;display:flex;flex-direction:column;align-items:center;text-align:center}
+.ggmm-kicker{margin:0;font-size:2.3cqw;font-weight:600;line-height:1;letter-spacing:.34em;padding-left:.34em;text-transform:uppercase;color:var(--ggmm-brass)}
+.ggmm-title{margin:.8cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:12.5cqw;line-height:1;color:var(--ggmm-ink)}
+
+/* Small cream tickets with a brass stub, tilted like the reference. */
+.ggmm-ticket{position:absolute;z-index:2;margin:0;display:flex;align-items:stretch;background:var(--ggmm-paper);border-radius:.8cqw;box-shadow:var(--ggmm-ticket-shadow);overflow:hidden}
+.ggmm-ticket--left{left:5cqw;top:45cqw;transform:rotate(-8deg)}
+.ggmm-ticket--right{right:5cqw;top:51cqw;transform:rotate(7deg)}
+.ggmm-ticket-text{display:flex;align-items:center;padding:1.5cqw 2.2cqw;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:3.1cqw;line-height:1;white-space:nowrap;color:var(--ggmm-ink)}
+.ggmm-ticket-stub{display:flex;align-items:center;padding:0 1.6cqw;border-left:.25cqw dashed var(--ggmm-paper);font-size:1.5cqw;font-weight:700;line-height:1;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;background:var(--ggmm-brass);color:var(--ggmm-paper)}
+
+/* Text set on the blank centre of the photo's newspaper (x 18–83%, under its masthead rule). */
+.ggmm-paper{position:absolute;z-index:2;left:19.5cqw;right:19.5cqw;top:75.5cqw;display:flex;flex-direction:column;align-items:center;text-align:center;color:var(--ggmm-ink);mix-blend-mode:multiply}
+.ggmm-mast{margin:0;width:100%;display:flex;justify-content:space-between;align-items:baseline;padding-bottom:.9cqw;border-bottom:.18cqw solid var(--ggmm-rule)}
+.ggmm-mast b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:2.6cqw;letter-spacing:.18em;text-transform:uppercase}
+.ggmm-mast span{font-size:1.5cqw;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ggmm-muted)}
+.ggmm-headline{margin:1.8cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:6.6cqw;line-height:1;color:var(--ggmm-rose)}
+.ggmm-body{margin:1.6cqw 0 0;max-width:56cqw;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.9cqw;line-height:1.24;text-wrap:balance;color:var(--ggmm-ink)}
+.ggmm-deal{margin:1.6cqw 0 0;display:flex;align-items:baseline;gap:1.6cqw;color:var(--ggmm-rose)}
+.ggmm-deal span{font-size:1.9cqw;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--ggmm-brass)}
+.ggmm-deal b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:6.4cqw;line-height:1}
+.ggmm-closer{margin:1.2cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:4.2cqw;line-height:1;color:var(--ggmm-ink)}
+
+.ggmm-watermark{position:absolute;inset:0;z-index:3;width:100%;height:100%;object-fit:contain;pointer-events:none}

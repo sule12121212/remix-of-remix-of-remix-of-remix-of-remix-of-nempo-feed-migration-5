@@ -1,0 +1,112 @@
+/* GGS Feed slide 62 — "We are open" over the treatment photo. Scoped ggop- styles; colors live in src/styles.css. */
+.ggop-root {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  container-type: inline-size;
+  background: var(--ggop-bg);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ggop-ink);
+}
+
+.ggop-root * { letter-spacing: 0; }
+.ggop-root p, .ggop-root h2, .ggop-root h3 { margin: 0; }
+
+.ggop-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 62%;
+}
+
+.ggop-veil-top {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 46%;
+  background: linear-gradient(180deg, var(--ggop-veil-strong) 0%, var(--ggop-veil-mid) 55%, transparent 100%);
+}
+
+.ggop-veil-bottom {
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  background: linear-gradient(0deg, var(--ggop-shade-strong) 0%, var(--ggop-shade-mid) 58%, transparent 100%);
+}
+
+.ggop-head {
+  position: absolute;
+  top: 18cqw;
+  left: 7cqw;
+  right: 7cqw;
+  text-align: center;
+}
+
+.ggop-title {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 0.95;
+  padding-top: 1cqw;
+}
+
+.ggop-title-top {
+  display: block;
+  font-size: 6.4cqw;
+  font-weight: 500;
+  color: var(--ggop-plum);
+}
+
+.ggop-title-em {
+  display: block;
+  font-style: normal;
+  font-size: 15cqw;
+  font-weight: 700;
+  padding-bottom: .22em;
+  margin-bottom: calc(1cqw - .22em);
+  background: var(--ggop-title-fill);
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.ggop-invite {
+  position: absolute;
+  left: 8cqw;
+  right: 8cqw;
+  bottom: 12.5cqw;
+  text-align: center;
+  color: var(--ggop-cream);
+}
+
+.ggop-invite-title {
+  font-size: 5.1cqw;
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.ggop-invite-body {
+  margin-top: 1.5cqw;
+  font-size: 3.2cqw;
+  line-height: 1.35;
+  color: var(--ggop-cream-soft);
+}
+
+.ggop-invite-line {
+  display: block;
+  width: 15cqw;
+  height: 0.5cqw;
+  margin: 2cqw auto 0;
+  background: var(--ggop-pink);
+}
+
+.ggop-watermark {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}

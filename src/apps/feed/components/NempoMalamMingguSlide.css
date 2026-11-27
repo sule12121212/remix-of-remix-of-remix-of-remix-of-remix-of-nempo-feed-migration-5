@@ -1,0 +1,76 @@
+/* NEMPO Feed slide 54 — "Malam Minggu" in the basic NEMPO blue look of slide 45. Colors live in src/styles.css (.nmm-root). */
+.nmm-root {
+  position: relative; isolation: isolate; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;
+  container-type: inline-size; background: var(--nmm-bg); color: var(--kmt-text);
+  font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif;
+}
+.nmm-root * { letter-spacing: 0; box-sizing: border-box; }
+.nmm-root p, .nmm-root h2, .nmm-root ol { margin: 0; padding: 0; }
+.nmm-root ol { list-style: none; }
+
+.nmm-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.nmm-grid { position: absolute; inset: 0; background-image: var(--kmt-grid); background-size: 6cqw 6cqw; mask-image: radial-gradient(circle at 76% 30%, #000 0%, transparent 60%); }
+.nmm-ring { position: absolute; border-radius: 50%; border: .3cqw solid var(--kmt-line); }
+.nmm-ring-a { width: 70cqw; height: 70cqw; right: -22cqw; top: 2cqw; }
+.nmm-ring-b { width: 50cqw; height: 50cqw; right: -12cqw; top: 12cqw; border-style: dashed; animation: nmm-spin 60s linear infinite; }
+.nmm-glow { position: absolute; width: 64cqw; height: 64cqw; right: -18cqw; top: 5cqw; background: var(--nmm-glow); }
+@keyframes nmm-spin { to { transform: rotate(360deg); } }
+
+.nmm-moon-wrap { position: absolute; right: 11cqw; top: 23cqw; filter: var(--nmm-moon-halo); animation: nmm-float 6s ease-in-out infinite; }
+.nmm-moon {
+  display: block; width: 19cqw; height: 19cqw; border-radius: 50%; background: var(--nmm-moon);
+  -webkit-mask-image: radial-gradient(circle at 72% 30%, transparent 42%, #000 43.5%);
+  mask-image: radial-gradient(circle at 72% 30%, transparent 42%, #000 43.5%);
+}
+.nmm-star {
+  position: absolute; margin: -1.3cqw 0 0 -1.3cqw; background: var(--nmm-star);
+  clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+  animation: nmm-twinkle 1.8s ease-in-out infinite;
+}
+@keyframes nmm-float { 0%, 100% { transform: translateY(0) rotate(-6deg); } 50% { transform: translateY(-1.2cqw) rotate(-3deg); } }
+@keyframes nmm-twinkle { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
+
+.nmm-hero { position: absolute; z-index: 3; top: 24cqw; left: 7.5cqw; width: 62cqw; display: flex; flex-direction: column; align-items: flex-start; gap: 2.6cqw; }
+.nmm-kicker {
+  display: inline-flex; align-items: center; gap: 1.2cqw; padding: 1cqw 2.2cqw 1cqw 1.8cqw; border-radius: 99px;
+  background: var(--nmm-yellow); color: var(--nmm-navy); font-size: 1.8cqw; font-weight: 800; line-height: 1;
+  text-transform: uppercase; letter-spacing: .1em !important;
+}
+.nmm-kicker svg { width: 2.3cqw; height: 2.3cqw; }
+.nmm-title { font-size: 7.6cqw; font-weight: 800; line-height: 1.02; letter-spacing: -.02em !important; text-shadow: var(--nmm-text-shadow); white-space: nowrap; }
+.nmm-title em { font-style: normal; color: var(--nmm-yellow); }
+.nmm-sub { font-size: 2.4cqw; font-weight: 500; line-height: 1.4; color: var(--nmm-soft); max-width: 46cqw; }
+
+.nmm-bottom { position: absolute; z-index: 3; left: 7.5cqw; right: 7.5cqw; bottom: 7.5cqw; display: flex; flex-direction: column; gap: 2.6cqw; }
+.nmm-label { display: flex; align-items: center; gap: 2cqw; font-size: 1.8cqw; font-weight: 800; line-height: 1; text-transform: uppercase; letter-spacing: .16em !important; color: var(--nmm-yellow); white-space: nowrap; }
+.nmm-label span { flex: 1; height: 1px; background: var(--kmt-line-strong); }
+
+.nmm-grid-options { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2cqw; }
+.nmm-tile {
+  position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; min-height: 17cqw;
+  padding: 2.6cqw 3cqw 2.8cqw; border-radius: 3.6cqw; color: var(--nmm-navy); line-height: 1; box-shadow: var(--nmm-card-shadow);
+}
+.nmm-tile--yellow { background: var(--nmm-tile-yellow); }
+.nmm-tile--white { background: var(--nmm-tile-white); }
+.nmm-tile--blue { background: var(--nmm-tile-blue); }
+.nmm-tile::after { content: ''; position: absolute; right: -6cqw; top: -6cqw; width: 16cqw; height: 16cqw; border-radius: 50%; background: var(--nmm-tile-shine); }
+.nmm-tile-no { position: relative; z-index: 1; font-size: 7cqw; font-weight: 800; letter-spacing: -.03em !important; }
+.nmm-tile-icon { position: absolute; z-index: 1; top: 2.6cqw; right: 2.6cqw; display: grid; place-items: center; width: 4.6cqw; height: 4.6cqw; border-radius: 1.3cqw; background: var(--nmm-navy); color: var(--nmm-card); box-shadow: var(--nmm-icon-shadow); }
+.nmm-tile-icon svg { width: 2.3cqw; height: 2.3cqw; stroke-width: 1.75; }
+.nmm-tile strong { position: relative; z-index: 1; margin-top: 1.6cqw; font-size: 2.7cqw; font-weight: 800; line-height: 1.12; letter-spacing: -.01em !important; }
+
+.nmm-root .nmm-cta {
+  display: flex; align-items: center; gap: 2.6cqw; padding: 2.4cqw 3cqw 2.4cqw 2.6cqw; border-radius: 99px;
+  background: var(--nmm-card); color: var(--nmm-navy); box-shadow: var(--nmm-card-shadow);
+}
+.nmm-cta-icon { flex: none; display: grid; place-items: center; width: 7cqw; height: 7cqw; border-radius: 50%; background: var(--nmm-navy); color: var(--nmm-yellow); }
+.nmm-cta-icon svg { width: 3.4cqw; height: 3.4cqw; }
+.nmm-cta-text { flex: 1; display: flex; flex-direction: column; gap: 1cqw; line-height: 1; }
+.nmm-cta-text span { font-size: 2cqw; font-weight: 600; color: var(--nmm-navy-soft); }
+.nmm-cta-text strong { font-size: 3.9cqw; font-weight: 800; letter-spacing: -.01em !important; white-space: nowrap; }
+.nmm-cta-go { flex: none; display: grid; place-items: center; width: 5.6cqw; height: 5.6cqw; border-radius: 50%; background: var(--nmm-yellow); color: var(--nmm-navy); }
+.nmm-cta-go svg { width: 2.8cqw; height: 2.8cqw; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nmm-ring-b, .nmm-moon-wrap, .nmm-star { animation: none; }
+}

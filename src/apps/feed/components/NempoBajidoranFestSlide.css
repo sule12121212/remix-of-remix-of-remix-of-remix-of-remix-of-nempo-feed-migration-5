@@ -1,0 +1,122 @@
+/* NEMPO Feed slide 63 — Vibez-Fest-style Bajidoran DJ poster. Colors live in src/styles.css (.nbx-root). */
+.nbx-root {
+  position: relative; isolation: isolate; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;
+  container-type: inline-size; background: var(--nbx-sky); color: var(--nbx-white);
+  font-family: 'Poppins', sans-serif;
+}
+.nbx-root * { box-sizing: border-box; letter-spacing: 0; }
+.nbx-root p, .nbx-root h2 { margin: 0; padding: 0; }
+
+/* Warm hazy stage backdrop (1086×1448, 3:4) + a deeper tint at the top so the white header reads */
+.nbx-bg { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.nbx-haze { position: absolute; z-index: 1; inset: 0; pointer-events: none; background: var(--nbx-haze); }
+
+/* Same header as the Good Story Cafe event slides (46–53) */
+.nbx-header { z-index: 9; font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif; }
+.nbx-header * { letter-spacing: initial; }
+.nbx-root .kmt-name { text-shadow: var(--nbx-text-shadow); }
+.nbx-root .nar-gsc { background: var(--nbx-cream); }
+
+/* Owner's 3D BAJIDORAN DJ lettering (1476×860) */
+.nbx-title { position: absolute; z-index: 4; top: 17cqw; left: 0; right: 0; display: flex; justify-content: center; }
+.nbx-title img { display: block; width: 76cqw; height: auto; filter: var(--nbx-title-shadow); pointer-events: none; user-select: none; }
+.nbx-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Performers: DJs at the back sides, dancers and the kendang group in front; bottom fades into the info area */
+.nbx-cast { position: absolute; z-index: 5; inset: 0; pointer-events: none; }
+.nbx-cast img { position: absolute; display: block; height: auto; user-select: none; filter: var(--nbx-cutout-shadow); }
+/* MC (left) and DJ Dityar (right) stand at the back edges; their bottoms are faded so the photos' own
+   cut at the hips never reads as a hard line. Dancers and musicians stay layered in front.
+   No drop shadow here: the fade mask would clip it into a faint box behind each person. */
+.nbx-cast .nbx-dj { filter: none; -webkit-mask-image: linear-gradient(to top, transparent 0, #000 26%); mask-image: linear-gradient(to top, transparent 0, #000 26%); }
+.nbx-mc { left: -2cqw; top: 55cqw; width: 28cqw; }
+.nbx-dj--right { right: -1cqw; top: 58cqw; width: 31cqw; }
+.nbx-dancers { left: 0cqw; top: 79cqw; width: 42cqw; z-index: 2; }
+.nbx-kendang { left: 18cqw; top: 62cqw; width: 58cqw; z-index: 1; }
+.nbx-tag {
+  position: absolute; z-index: 3; padding: .9cqw 2.2cqw; border-radius: 99cqw; white-space: nowrap;
+  font-family: 'Anton', sans-serif; font-size: 2.9cqw; line-height: 1; text-transform: uppercase;
+  color: var(--nbx-white); background: var(--nbx-ink); box-shadow: var(--nbx-tag-shadow); transform: rotate(-4deg);
+}
+.nbx-tag--mc { left: 4cqw; top: 72cqw; }
+.nbx-tag--dj { right: 4cqw; top: 76cqw; }
+
+/* Activity pills (like Vibez "Activities") */
+.nbx-activities { position: absolute; z-index: 7; left: 3cqw; right: 3cqw; top: 98cqw; display: flex; justify-content: center; align-items: center; gap: 1.6cqw; }
+.nbx-activities p { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.nbx-pill {
+  display: inline-flex; align-items: center; gap: 1.2cqw; padding: 1.2cqw 2.5cqw; border-radius: 99cqw;
+  font-weight: 800; font-size: 3cqw; line-height: 1; color: var(--nbx-ink); white-space: nowrap; box-shadow: var(--nbx-pill-shadow);
+}
+.nbx-pill svg { width: 3.4cqw; height: 3.4cqw; flex: none; }
+.nbx-pill--gold { background: var(--nbx-pill-gold); }
+.nbx-pill--pink { background: var(--nbx-pill-pink); }
+.nbx-pill--violet { background: var(--nbx-pill-violet); color: var(--nbx-white); }
+
+/* Warm glow over the performers' legs so the info area reads (sits above the cut-outs) */
+.nbx-fade { position: absolute; z-index: 6; left: 0; right: 0; bottom: 0; height: 50cqw; pointer-events: none; background: var(--nbx-fade); }
+
+/* Time row */
+.nbx-times { position: absolute; z-index: 7; left: 4cqw; right: 4cqw; top: 105.5cqw; display: flex; justify-content: center; gap: 4cqw; }
+.nbx-time { display: inline-flex; align-items: center; gap: 1.6cqw; }
+.nbx-time-label { font-family: 'Anton', sans-serif; font-size: 6.4cqw; line-height: 1.2; text-transform: uppercase; color: var(--nbx-cream); text-shadow: var(--nbx-time-shadow); }
+.nbx-time-value { padding: .5cqw 1.6cqw .6cqw; font-family: 'Anton', sans-serif; font-size: 4.8cqw; line-height: 1.2; text-transform: uppercase; color: var(--nbx-ink); background: var(--nbx-tag-fill); }
+
+/* Date + venue boxes */
+.nbx-info { position: absolute; z-index: 7; left: 4cqw; right: 4cqw; top: 114.5cqw; height: 9.6cqw; display: flex; gap: 1.6cqw; }
+.nbx-info > div { display: flex; align-items: center; background: var(--nbx-box); box-shadow: var(--nbx-box-shadow); color: var(--nbx-ink); }
+.nbx-date { flex: none; flex-direction: column; justify-content: center; gap: .7cqw; align-items: center !important; padding: 0 3.4cqw; }
+.nbx-date small { font-weight: 800; font-size: 2.4cqw; line-height: 1; text-transform: uppercase; letter-spacing: .14em !important; color: var(--nbx-ink-soft); }
+.nbx-date b { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 4.8cqw; line-height: 1; text-transform: uppercase; }
+.nbx-venue { flex: 1; gap: 2cqw; padding: 0 3cqw; }
+.nbx-venue svg { width: 5.4cqw; height: 5.4cqw; flex: none; fill: var(--nbx-ink); color: var(--nbx-box-solid); }
+.nbx-venue span { display: flex; flex-direction: column; gap: .5cqw; }
+.nbx-venue b { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 4.6cqw; line-height: 1.1; text-transform: uppercase; }
+.nbx-venue small { font-weight: 700; font-size: 2.15cqw; white-space: nowrap; line-height: 1.15; text-transform: uppercase; color: var(--nbx-ink-soft); }
+
+/* Same single-line pills as slide 62; only the vertical anchor differs to clear the event details. */
+.nbx-root .nbx-footer { z-index: 9; bottom: 3.5cqw; font-family: 'DM Sans', sans-serif; }
+.nbx-footer .kmt-pill { line-height: 1.2; }
+.nbx-footer .kmt-pill strong { letter-spacing: 0 !important; }
+
+/* Slide 65: portrait Story artboard — the poster itself is baked into the stage backdrop. */
+.nbx-story { aspect-ratio: 9 / 16; }
+
+.nbx-poster { position: absolute; z-index: 20; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Slide 65 story: the poster sits in the middle of the 9:16 artboard and the poster's own edge
+   colours are extended above and below it (baked into nempo-feed-65-bajidoran-stage.png).
+   That file is 1440×2560 with a 420 px top band and a 352 px bottom band, so at the 1440 px
+   capture width 1cqw = 14.4 px and the bands are exactly 29.17cqw / 24.44cqw tall — the hook and
+   the contact pills below line up with them. */
+.nbx-story-stage { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Top band: the day, then the "Hari Ini!" hook. */
+.nbx-story-hook {
+  position: absolute; z-index: 3; top: 0; left: 0; right: 0; height: 29.17cqw;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.8cqw;
+  text-align: center;
+}
+.nbx-story-kicker {
+  font-family: 'DM Sans', sans-serif; font-weight: 800; font-size: 3.3cqw; line-height: 1;
+  letter-spacing: .34em !important; text-transform: uppercase; color: var(--nbx-cream);
+  text-shadow: var(--nbx-text-shadow);
+}
+.nbx-story-hook strong {
+  font-family: 'Anton', sans-serif; font-weight: 400; font-size: 17cqw; line-height: .92;
+  text-transform: uppercase; color: var(--nbx-white); text-shadow: var(--nbx-text-shadow);
+  transform: rotate(-3deg);
+}
+
+/* Bottom band: the contact details, rebuilt bigger than the poster's own pills and kept clear of
+   the very bottom edge where the story's reply box sits. */
+.nbx-story-contacts {
+  position: absolute; z-index: 3; bottom: 0; left: 0; right: 0; height: 24.44cqw;
+  display: flex; align-items: center; justify-content: center; gap: 2.4cqw; padding-bottom: 5cqw;
+}
+.nbx-story-pill {
+  display: inline-flex; align-items: center; gap: 1.4cqw; padding: 2.1cqw 3.8cqw; border-radius: 99cqw;
+  background: var(--nbx-contact); color: var(--nbx-white); box-shadow: var(--nbx-pill-shadow);
+  font-weight: 800; font-size: 4.1cqw; line-height: 1; white-space: nowrap;
+}
+.nbx-story-pill svg { width: 4.6cqw; height: 4.6cqw; flex: none; }

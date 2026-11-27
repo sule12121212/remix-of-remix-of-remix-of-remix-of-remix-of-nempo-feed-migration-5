@@ -1,0 +1,100 @@
+/* NEMPO Feed slide 58 — informative Car Free Day poster with real news photos, in slide 57's bright playful look.
+   Colors in src/styles.css (.nci-root). Artboard is 100cqw × 133.33cqw. */
+.nci-root {
+  position: relative; isolation: isolate; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;
+  container-type: inline-size; background: var(--nci-sky); color: var(--nci-white);
+  font-family: 'Fredoka', 'Poppins', sans-serif;
+}
+.nci-root * { box-sizing: border-box; }
+.nci-root p, .nci-root h2, .nci-root ul, .nci-root figure { margin: 0; padding: 0; }
+.nci-root ul { list-style: none; }
+
+/* Soft sun glow + darker top so the white title pops */
+.nci-root::before {
+  content: ''; position: absolute; z-index: 1; inset: 0 0 auto; height: 50cqw; pointer-events: none;
+  background: var(--nci-sky-tint);
+}
+.nci-root::after {
+  content: ''; position: absolute; z-index: 1; right: -18cqw; top: -18cqw; width: 60cqw; height: 60cqw;
+  border-radius: 50%; pointer-events: none; background: var(--nci-sun-glow);
+}
+
+/* Shared Nempo Feed header: keep its own fonts and colors */
+.nci-root .kmt-header { z-index: 8; font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif; }
+.nci-root .kmt-header * { letter-spacing: initial; }
+.nci-root .kmt-name { text-shadow: var(--nci-text-pop); }
+.nci-root .kmt-badge { background: color-mix(in srgb, var(--nci-navy) 60%, transparent); }
+
+/* Bouncy white title with a solid blue cartoon edge */
+.nci-title {
+  position: absolute; z-index: 5; top: 14cqw; left: 0; right: 0; display: flex; flex-direction: column;
+  align-items: center; gap: .6cqw; transform: rotate(-2deg);
+  font-weight: 700; font-size: 8.6cqw; line-height: .95; letter-spacing: .01em; text-align: center;
+  text-shadow: var(--nci-title-pop);
+}
+.nci-title span:last-child { color: var(--nci-sun); }
+
+/* Sticker tagline with location pin */
+.nci-root .nci-tagline {
+  position: absolute; z-index: 6; top: 33cqw; left: 50%; transform: translateX(-50%) rotate(-3deg);
+  display: flex; align-items: center; gap: 1.2cqw;
+  padding: 1.3cqw 4.6cqw 1.5cqw 3.8cqw; border-radius: 99cqw; background: var(--nci-white); color: var(--nci-navy);
+  font-weight: 700; font-size: 3.4cqw; line-height: 1; white-space: nowrap; box-shadow: 0 .6cqw 0 var(--nci-sun-deep);
+}
+.nci-tagline svg { width: 3.4cqw; height: 3.4cqw; flex: none; color: var(--nci-pink-deep); }
+
+/* Schedule line — tilted the same way as the sticker */
+.nci-release {
+  position: absolute; z-index: 6; top: 40.6cqw; left: 0; right: 0; text-align: center; transform: rotate(-3deg);
+  font-size: 2.5cqw; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; text-shadow: var(--nci-text-pop);
+}
+
+/* Two real news photos as taped polaroids, fully visible above the card */
+.nci-photos {
+  position: absolute; z-index: 4; top: 46.5cqw; left: 7cqw; right: 7cqw;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4cqw;
+}
+.nci-polaroid {
+  position: relative; padding: 1.4cqw 1.4cqw 1.2cqw; background: var(--nci-white);
+  border-radius: 1.6cqw; box-shadow: var(--nci-pop);
+}
+.nci-polaroid:first-child { transform: rotate(-3deg); }
+.nci-polaroid:last-child { transform: rotate(2.5deg) translateY(.6cqw); }
+.nci-polaroid::before {
+  content: ''; position: absolute; top: -1.6cqw; left: 50%; width: 12cqw; height: 3.4cqw;
+  transform: translateX(-50%) rotate(-4deg); background: var(--nci-tape); border-radius: .4cqw;
+}
+.nci-polaroid:last-child::before { transform: translateX(-50%) rotate(5deg); }
+.nci-polaroid img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 1cqw; }
+.nci-polaroid figcaption { display: flex; flex-direction: column; align-items: center; gap: .3cqw; padding-top: 1.1cqw; }
+.nci-caption { font-size: 2.6cqw; font-weight: 700; line-height: 1.1; color: var(--nci-navy); }
+.nci-credit { font-size: 1.7cqw; font-weight: 500; line-height: 1; color: color-mix(in srgb, var(--nci-navy) 55%, var(--nci-white)); }
+
+/* White card: four icon facts in a 2×2 grid above the shared footer */
+.nci-card {
+  position: absolute; z-index: 7; left: 5cqw; right: 5cqw; bottom: 14.5cqw; padding: 2.6cqw 2.8cqw 2.2cqw;
+  display: flex; flex-direction: column; align-items: center; gap: 1.8cqw;
+  background: var(--nci-card); border-radius: 4cqw; box-shadow: var(--nci-pop); color: var(--nci-navy);
+}
+.nci-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6cqw 2cqw; width: 100%; }
+.nci-facts li {
+  display: flex; align-items: flex-start; gap: 1.6cqw; padding: 1.6cqw 1.8cqw; border-radius: 2.4cqw;
+  background: color-mix(in srgb, var(--nci-sun) 28%, var(--nci-white));
+}
+.nci-fact-icon {
+  flex: none; display: grid; place-items: center; width: 6cqw; height: 6cqw; border-radius: 50%;
+  background: var(--nci-sun); box-shadow: 0 .4cqw 0 var(--nci-sun-deep); color: var(--nci-navy);
+}
+.nci-fact-icon svg { width: 3.2cqw; height: 3.2cqw; }
+.nci-facts li:nth-child(2) { background: color-mix(in srgb, var(--nci-mint) 28%, var(--nci-white)); }
+.nci-facts li:nth-child(2) .nci-fact-icon { background: var(--nci-mint); box-shadow: 0 .4cqw 0 color-mix(in srgb, var(--nci-mint) 60%, var(--nci-navy)); }
+.nci-facts li:nth-child(3) { background: color-mix(in srgb, var(--nci-pink) 22%, var(--nci-white)); }
+.nci-facts li:nth-child(3) .nci-fact-icon { background: var(--nci-pink); box-shadow: 0 .4cqw 0 var(--nci-pink-deep); color: var(--nci-white); }
+.nci-facts li:nth-child(4) { background: color-mix(in srgb, var(--nci-lilac) 28%, var(--nci-white)); }
+.nci-facts li:nth-child(4) .nci-fact-icon { background: var(--nci-lilac); box-shadow: 0 .4cqw 0 color-mix(in srgb, var(--nci-lilac) 60%, var(--nci-navy)); color: var(--nci-white); }
+.nci-fact-heading { font-size: 2.9cqw; font-weight: 700; line-height: 1.1; color: var(--nci-navy); }
+.nci-fact-text { margin-top: .5cqw !important; font-size: 2.2cqw; font-weight: 500; line-height: 1.28; color: color-mix(in srgb, var(--nci-navy) 80%, var(--nci-white)); }
+.nci-cta { font-size: 2.4cqw; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--nci-sun-deep); }
+
+/* The shared NempoFooter supplies the same .kmt-footer pills as slide 35. */
+.nci-root .kmt-footer { z-index: 8; font-family: 'DM Sans', sans-serif; }

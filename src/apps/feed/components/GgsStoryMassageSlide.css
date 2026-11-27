@@ -1,0 +1,7 @@
+.ggsm-root{position:relative;isolation:isolate;width:min(100%,45vh);max-width:100%;aspect-ratio:9/16;overflow:hidden;container-type:inline-size;background:var(--ggsm-taupe);font-family:'DM Sans',sans-serif;color:var(--ggsm-cream);box-shadow:0 24px 70px color-mix(in srgb,var(--ggsm-ink) 22%,transparent)}
+.ggsm-root--overlay{background:transparent;box-shadow:none}
+.ggsm-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ggsm-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:var(--ggsm-shade)}
+
+/* One simple centred line, the only text on the slide. */
+.ggsm-title{position:absolute;z-index:2;left:6cqw;right:6cqw;top:50%;margin:0;transform:translateY(-50%);text-align:center;font-family:'DM Sans',sans-serif;font-weight:500;font-size:6.5cqw;line-height:1;letter-spacing:.04em;color:var(--ggsm-cream);text-shadow:var(--ggsm-text-shadow)}

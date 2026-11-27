@@ -1,0 +1,20 @@
+.ggpa-root{position:relative;isolation:isolate;width:100%;aspect-ratio:3/4;overflow:hidden;container-type:inline-size;background:transparent;font-family:'DM Sans',sans-serif;color:var(--ggpa-ink)}
+.ggpa-root--checker{background-color:var(--ggpa-check-a);background-image:linear-gradient(45deg,var(--ggpa-check-b) 25%,transparent 25%,transparent 75%,var(--ggpa-check-b) 75%),linear-gradient(45deg,var(--ggpa-check-b) 25%,transparent 25%,transparent 75%,var(--ggpa-check-b) 75%);background-size:5cqw 5cqw;background-position:0 0,2.5cqw 2.5cqw}
+.ggpa-root *{letter-spacing:0}
+
+.ggpa-sticker{position:absolute;z-index:2;left:11cqw;top:17cqw;padding:3.4cqw 5cqw 3.8cqw 4.4cqw;border-radius:3cqw;background:var(--ggpa-card);box-shadow:var(--ggpa-card-shadow);transform:rotate(-3deg);transform-origin:0 0}
+.ggpa-pill{margin:0;display:inline-block;padding:.6cqw 2.2cqw .7cqw;border-radius:99cqw;background:var(--ggpa-plum);color:var(--ggpa-pink-light);font-size:3.3cqw;font-weight:900;letter-spacing:.3cqw !important}
+.ggpa-title{margin:1.4cqw 0 0;display:flex;flex-direction:column;font-size:6.2cqw;font-weight:900;line-height:1.04;color:var(--ggpa-ink);white-space:nowrap}
+.ggpa-punch{margin:1.4cqw 0 0;display:flex;flex-direction:column;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;font-size:5.4cqw;line-height:1.08;color:var(--ggpa-pink);white-space:nowrap}
+
+.ggpa-offer{margin:2.8cqw 0 0;font-size:7.4cqw;font-weight:900;line-height:1;color:var(--ggpa-pink);white-space:nowrap}
+.ggpa-note{margin:1.4cqw 0 0;font-size:3.2cqw;font-weight:700;color:var(--ggpa-was);white-space:nowrap}
+
+.ggpa-period{margin:2.8cqw 0 0;display:inline-block;padding:.8cqw 2.4cqw .9cqw;border-radius:99cqw;background:var(--ggpa-pink);color:var(--ggpa-card);font-size:3.3cqw;font-weight:800;white-space:nowrap}
+
+.ggpa-scissors{position:absolute;right:-4.6cqw;top:-5cqw;width:11cqw;height:11cqw;overflow:visible;transform:rotate(-18deg);filter:var(--ggpa-spark-shadow)}
+.ggpa-scissors g{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ggpa-scissors-edge{stroke:var(--ggpa-card);stroke-width:5.2}
+.ggpa-scissors-ink{stroke:var(--ggpa-pink);stroke-width:2.4}
+
+.ggpa-arrow{position:absolute;z-index:2;left:70cqw;top:78cqw;width:15cqw;height:15cqw;overflow:visible;fill:none;stroke:var(--ggpa-arrow);stroke-width:4.4;stroke-linecap:round;stroke-linejoin:round;filter:var(--ggpa-arrow-shadow)}

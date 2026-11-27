@@ -1,0 +1,29 @@
+.ggsn-root{position:relative;isolation:isolate;width:100%;aspect-ratio:3/4;overflow:hidden;container-type:inline-size;background:var(--ggsn-bg);font-family:'DM Sans',sans-serif;color:var(--ggsn-ink)}
+.ggsn-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ggsn-shade{position:absolute;inset:0;background:var(--ggsn-shade);pointer-events:none}
+.ggsn-watermark{position:absolute;inset:0;z-index:3;width:100%;height:100%;object-fit:contain;pointer-events:none}
+
+/* Four-point star glints on the hair highlights; they twinkle in the preview (paused at full size in the capture). */
+.ggsn-glint{position:absolute;z-index:1;transform:translate(-50%,-50%);background:var(--ggsn-glint);clip-path:polygon(50% 0,58% 42%,100% 50%,58% 58%,50% 100%,42% 58%,0 50%,42% 42%);filter:drop-shadow(0 0 .8cqw var(--ggsn-glint-glow));animation:ggsn-twinkle 3.2s ease-in-out infinite;pointer-events:none}
+@keyframes ggsn-twinkle{0%,100%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0)}50%{opacity:.35;transform:translate(-50%,-50%) scale(.55) rotate(25deg)}}
+@media (prefers-reduced-motion:reduce){.ggsn-glint{animation:none}}
+
+/* Headline on the dark cape, left of the hair (x 4–36cqw, y 71–93cqw): below the flat-iron Santa, above the jar Santa. */
+.ggsn-head{position:absolute;z-index:2;left:4.6cqw;top:71.6cqw;display:flex;flex-direction:column;align-items:flex-start;gap:1cqw;line-height:1}
+.ggsn-kicker{padding:.8cqw 1.8cqw;border-radius:99cqw;background:var(--ggsn-chip);color:var(--ggsn-chip-ink);box-shadow:var(--ggsn-chip-shadow);font-size:1.7cqw;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.ggsn-title{margin:.6cqw 0 0;display:flex;flex-direction:column;align-items:flex-start;line-height:.9}
+.ggsn-script{font-family:'Yellowtail',cursive;font-weight:400;font-size:6.4cqw;color:var(--ggsn-pop);text-shadow:var(--ggsn-glow);transform:rotate(-6deg) translate(.6cqw,.4cqw)}
+.ggsn-big{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;font-size:7.6cqw;color:var(--ggsn-gold);text-shadow:var(--ggsn-glow)}
+.ggsn-sub{margin-top:.4cqw;font-size:2.2cqw;font-weight:600;letter-spacing:.06em;color:var(--ggsn-ink);text-shadow:var(--ggsn-glow)}
+
+/* Slides 55–58: compact cream sticker card placed where no Santa sits (top-right under the tagline, or bottom-left above the footer). */
+.ggsn--cape .ggsn-shade{background:var(--ggsn-shade)}
+.ggsn--card-tr .ggsn-shade,.ggsn--card-bl .ggsn-shade{background:none}
+.ggsn--card-tr .ggsn-head,.ggsn--card-bl .ggsn-head{align-items:center;gap:.5cqw;padding:1.5cqw 2.2cqw 1.7cqw;border-radius:2.6cqw;background:var(--ggsn-card);box-shadow:var(--ggsn-card-shadow);border:.3cqw solid var(--ggsn-card-line);text-align:center}
+.ggsn--card-tr .ggsn-head{left:auto;right:3.2cqw;top:15.4cqw;transform:rotate(3deg)}
+.ggsn--card-bl .ggsn-head{left:2.6cqw;top:auto;bottom:15.6cqw;transform:rotate(-3deg)}
+.ggsn--card-tr .ggsn-kicker,.ggsn--card-bl .ggsn-kicker{font-size:1.3cqw;padding:.6cqw 1.4cqw}
+.ggsn--card-tr .ggsn-title,.ggsn--card-bl .ggsn-title{align-items:center;margin:.2cqw 0 0}
+.ggsn--card-tr .ggsn-script,.ggsn--card-bl .ggsn-script{font-size:4.4cqw;color:var(--ggsn-card-pop);text-shadow:none;transform:rotate(-4deg)}
+.ggsn--card-tr .ggsn-big,.ggsn--card-bl .ggsn-big{font-size:5.2cqw;color:var(--ggsn-card-ink);text-shadow:none}
+.ggsn--card-tr .ggsn-sub,.ggsn--card-bl .ggsn-sub{margin-top:.2cqw;font-size:1.45cqw;color:var(--ggsn-card-sub);text-shadow:none;letter-spacing:.04em}

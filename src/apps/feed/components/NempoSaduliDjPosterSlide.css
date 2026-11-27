@@ -1,0 +1,49 @@
+/* NEMPO 50 — slide-31-style poster: Saduli Ragap dancers × DJ Dityar. */
+.nsd-root { position:relative; isolation:isolate; width:100%; aspect-ratio:3 / 4; overflow:hidden; container-type:inline-size; background:var(--nsd-stage); color:var(--nsd-white); font-family:'DM Sans',sans-serif; }
+.nsd-root * { letter-spacing:0; box-sizing:border-box; }
+.nsd-root p,.nsd-root h2 { margin:0; padding:0; }
+.nsd-bg { position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; pointer-events:none; }
+.nsd-beams { position:absolute; inset:0; z-index:1; background:var(--nsd-beams); mix-blend-mode:screen; pointer-events:none; }
+.nsd-glow { position:absolute; z-index:2; left:50%; bottom:20cqw; width:92cqw; height:80cqw; transform:translateX(-50%); background:var(--nsd-glow); filter:blur(1cqw); pointer-events:none; }
+.nsd-dancers { position:absolute; z-index:3; left:12cqw; top:50cqw; height:59cqw; width:auto; filter:var(--nsd-photo-filter); pointer-events:none; }
+.nsd-dj { position:absolute; z-index:4; right:7.5cqw; top:43cqw; height:72cqw; width:auto; filter:var(--nsd-dj-filter); -webkit-mask-image:linear-gradient(180deg,#000 88%,transparent 100%); mask-image:linear-gradient(180deg,#000 88%,transparent 100%); pointer-events:none; }
+.nsd-frame { position:absolute; inset:0; z-index:5; width:100%; height:100%; object-fit:fill; pointer-events:none; }
+.nsd-header { z-index:7; }
+.nsd-partners { display:flex; align-items:center; gap:2.5cqw; }
+.nsd-saduli { width:13cqw; height:10cqw; object-fit:contain; }
+.nsd-gsc { display:flex; width:8cqw; height:8cqw; padding:.6cqw; border-radius:1cqw; background:var(--nsd-cream); overflow:hidden; }
+.nsd-gsc img { width:100%; height:100%; object-fit:contain; }
+
+.nsd-heading { position:absolute; z-index:6; top:19cqw; left:10cqw; right:10cqw; display:flex; flex-direction:column; align-items:center; text-align:center; }
+.nsd-title { width:66cqw; transform:rotate(-2deg); filter:var(--nsd-title-drop); }
+.nsd-title img { display:block; width:100%; height:auto; }
+
+/* Ribbon: gold edge layer + gradient fill layer, both notched at the ends; shadow on the wrapper so clip-path can't cut it. */
+.nsd-ribbon { --nsd-notch:2.2cqw; --nsd-edge:.5cqw; display:inline-flex; filter:var(--nsd-ribbon-drop); }
+.nsd-ribbon-edge { display:flex; padding:var(--nsd-edge); background:var(--nsd-gold-edge); clip-path:polygon(0 0,100% 0,calc(100% - var(--nsd-notch)) 50%,100% 100%,0 100%,var(--nsd-notch) 50%); }
+.nsd-ribbon-fill { position:relative; display:block; padding:1cqw calc(var(--nsd-notch) + 2.6cqw) 1.1cqw; background:var(--nsd-blue-fill); color:var(--nsd-white); font-family:'Poppins',sans-serif; font-weight:800; line-height:1.2; white-space:nowrap; clip-path:polygon(0 0,100% 0,calc(100% - var(--nsd-notch) + var(--nsd-edge) * .5) 50%,100% 100%,0 100%,calc(var(--nsd-notch) - var(--nsd-edge) * .5) 50%); }
+.nsd-ribbon-fill::after { content:''; position:absolute; left:0; right:0; top:0; height:48%; background:var(--nsd-shine); pointer-events:none; }
+
+
+
+.nsd-tag { position:absolute; z-index:6; top:88.5cqw; display:flex; align-items:center; gap:1.4cqw; padding:.7cqw 3.2cqw .7cqw .7cqw; border-radius:99cqw; border:.45cqw solid var(--nsd-white); box-shadow:0 0 0 .55cqw var(--nsd-gold), var(--nsd-tag-shadow); overflow:hidden; }
+.nsd-tag::after { content:''; position:absolute; left:6%; right:6%; top:0; height:46%; border-radius:0 0 99cqw 99cqw; background:var(--nsd-shine); opacity:.7; pointer-events:none; }
+.nsd-tag-icon { position:relative; z-index:1; display:grid; place-items:center; width:5.4cqw; height:5.4cqw; flex:none; border-radius:50%; background:var(--nsd-gold-edge); box-shadow:inset 0 -.35cqw 0 color-mix(in srgb, var(--nsd-ink-dark) 25%, transparent); }
+.nsd-tag-icon svg { width:3.2cqw; height:3.2cqw; stroke-width:2.4; color:var(--nsd-ink-dark); }
+.nsd-tag-name { position:relative; z-index:1; font-family:'Shrikhand',serif; font-weight:400; font-size:3.4cqw; line-height:1; white-space:nowrap; padding-bottom:.3cqw; color:var(--nsd-white); text-shadow:0 .3cqw 0 var(--nsd-tag-ink); }
+.nsd-tag--saduli { left:14cqw; background:var(--nsd-pink-fill); --nsd-tag-ink:var(--nsd-pink-ink); transform:rotate(-4deg); }
+.nsd-tag--dj { right:14cqw; background:var(--nsd-violet-fill); --nsd-tag-ink:var(--nsd-violet-ink); transform:rotate(4deg); }
+.nsd-tag--dj .nsd-tag-name { color:var(--nsd-yellow); }
+
+.nsd-banner { position:absolute; z-index:8; left:16cqw; right:16cqw; top:103.5cqw; display:flex; flex-direction:column; align-items:center; padding:4.6cqw 3cqw 0; border-radius:2cqw 2cqw 4cqw 4cqw; background:var(--nsd-card-fill); border:.9cqw solid var(--nsd-gold); box-shadow:var(--nsd-banner-shadow); }
+.nsd-banner::before { content:''; position:absolute; inset:1cqw 1cqw 5.4cqw; border:.3cqw dashed var(--nsd-dash); border-radius:1.2cqw; pointer-events:none; }
+.nsd-day { position:absolute; top:-3.6cqw; left:50%; transform:translateX(-50%); --nsd-notch:2cqw; }
+.nsd-day .nsd-ribbon-fill { padding:.6cqw calc(var(--nsd-notch) + 4cqw) .7cqw; background:var(--nsd-red-fill); font-size:3.3cqw; font-weight:700; }
+.nsd-date { position:relative; font-family:'Poppins',sans-serif; font-size:6.6cqw; font-weight:800; line-height:1.05; white-space:nowrap; background:var(--nsd-date-fill); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.nsd-venue { position:relative; overflow:hidden; display:flex; align-items:center; gap:1.6cqw; margin:1.8cqw 0 -4.6cqw; padding:1.2cqw 3.6cqw 1.3cqw 2.6cqw; border-radius:99cqw; background:var(--nsd-blue-fill); border:.6cqw solid var(--nsd-gold); color:var(--nsd-white); box-shadow:var(--nsd-pill-shadow); }
+.nsd-venue::after { content:''; position:absolute; left:4%; right:4%; top:0; height:45%; border-radius:0 0 99cqw 99cqw; background:var(--nsd-shine); opacity:.6; pointer-events:none; }
+.nsd-venue svg { width:4.4cqw; height:4.4cqw; flex:none; color:var(--nsd-yellow); fill:var(--nsd-yellow); stroke:var(--nsd-blue); }
+.nsd-venue > span { display:flex; flex-direction:column; align-items:center; line-height:1.15; }
+.nsd-venue b { font-family:'Poppins',sans-serif; font-size:3.3cqw; font-weight:700; white-space:nowrap; }
+.nsd-venue em { font-style:normal; color:var(--nsd-yellow); }
+.nsd-venue small { font-family:'Poppins',sans-serif; font-size:1.75cqw; font-weight:600; white-space:nowrap; }

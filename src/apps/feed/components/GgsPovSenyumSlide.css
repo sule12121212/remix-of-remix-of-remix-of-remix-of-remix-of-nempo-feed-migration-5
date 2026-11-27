@@ -1,0 +1,17 @@
+.ggps-root{position:relative;isolation:isolate;width:100%;aspect-ratio:3/4;overflow:hidden;container-type:inline-size;background:var(--ggps-paper);font-family:'DM Sans',sans-serif;color:var(--ggps-ink)}
+.ggps-root *{letter-spacing:0}
+.ggps-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.ggps-wash{position:absolute;inset:0;z-index:1;background:var(--ggps-wash);pointer-events:none}
+
+.ggps-sticker{position:absolute;z-index:2;left:6cqw;top:24.4cqw;padding:2.4cqw 4cqw 2.8cqw 3.8cqw;border-radius:3cqw;background:var(--ggps-card);box-shadow:var(--ggps-card-shadow);transform:rotate(-3deg);transform-origin:0 0}
+.ggps-pov{margin:0;display:inline-block;padding:.5cqw 2cqw .6cqw;border-radius:99cqw;background:var(--ggps-plum);color:var(--ggps-pink-light);font-size:3cqw;font-weight:900;letter-spacing:.3cqw !important}
+.ggps-title{margin:1.2cqw 0 0;display:flex;flex-direction:column;font-size:6.1cqw;font-weight:900;line-height:1.04;color:var(--ggps-ink);white-space:nowrap}
+.ggps-punch{margin:1.4cqw 0 0;display:flex;flex-direction:column;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;font-size:5.1cqw;line-height:1.08;color:var(--ggps-pink);white-space:nowrap}
+
+.ggps-heart{position:absolute;right:-4.6cqw;top:-4.2cqw;width:11cqw;height:10cqw;overflow:visible;transform:rotate(14deg);filter:var(--ggps-heart-shadow)}
+.ggps-heart-fill{fill:var(--ggps-pink);stroke:var(--ggps-card);stroke-width:6;stroke-linejoin:round}
+.ggps-heart-crack{fill:none;stroke:var(--ggps-card);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+
+.ggps-arrow{position:absolute;z-index:2;left:56cqw;top:60cqw;width:15cqw;height:15cqw;overflow:visible;fill:none;stroke:var(--ggps-arrow);stroke-width:4.4;stroke-linecap:round;stroke-linejoin:round;filter:var(--ggps-arrow-shadow)}
+
+.ggps-watermark{position:absolute;inset:0;z-index:3;width:100%;height:100%;object-fit:contain;pointer-events:none}

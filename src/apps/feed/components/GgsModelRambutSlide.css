@@ -1,0 +1,25 @@
+/* GGS Feed slide 59 (3:4): ten hairstyles on the same client, crossfaded; colours live in src/styles.css. */
+.ggpm-root{position:relative;isolation:isolate;width:100%;aspect-ratio:3/4;overflow:hidden;container-type:inline-size;background:var(--ggpm-bg);font-family:'DM Sans',sans-serif;color:var(--ggpm-ink)}
+.ggpm-photos{position:absolute;inset:0;z-index:0}
+.ggpm-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation-duration:var(--ggpm-loop);animation-timing-function:linear;animation-iteration-count:infinite}
+.ggpm-shade{position:absolute;inset:0;z-index:1;background:var(--ggpm-shade);pointer-events:none}
+.ggpm-watermark{position:absolute;inset:0;z-index:4;width:100%;height:100%;object-fit:contain;pointer-events:none}
+
+/* Sticker card top-left, over the mesh cabinet beside her head (clear of the hair at every style). */
+.ggpm-head{position:absolute;z-index:2;left:3cqw;top:21cqw;display:flex;flex-direction:column;align-items:center;gap:.5cqw;padding:1.6cqw 2.4cqw 1.8cqw;border-radius:2.6cqw;background:var(--ggpm-card);border:.3cqw solid var(--ggpm-card-line);box-shadow:var(--ggpm-card-shadow);transform:rotate(-3deg);text-align:center;line-height:1}
+.ggpm-kicker{padding:.6cqw 1.4cqw;border-radius:99cqw;background:var(--ggpm-chip);color:var(--ggpm-chip-ink);font-size:1.3cqw;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.ggpm-title{margin:.2cqw 0 0;display:flex;flex-direction:column;align-items:center;line-height:.92}
+.ggpm-script{font-family:'Yellowtail',cursive;font-weight:400;font-size:5cqw;color:var(--ggpm-chip);transform:rotate(-4deg)}
+.ggpm-big{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;font-size:4.6cqw;color:var(--ggpm-card-ink)}
+.ggpm-sub{margin-top:.3cqw;font-size:1.5cqw;font-weight:600;letter-spacing:.04em;color:var(--ggpm-card-sub)}
+
+/* Style name on her black dress, above the footer. */
+.ggpm-menu{position:absolute;z-index:2;left:50%;top:101cqw;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:1.4cqw}
+.ggpm-names{position:relative;width:64cqw;height:9.4cqw}
+.ggpm-names span{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8cqw;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;font-size:6.2cqw;line-height:1;color:var(--ggpm-ink);text-shadow:var(--ggpm-glow);opacity:0;animation:ggpm-name var(--ggpm-loop) linear infinite;white-space:nowrap}
+.ggpm-names small{font-family:'DM Sans',sans-serif;font-style:normal;font-size:1.6cqw;font-weight:700;letter-spacing:.28em;color:var(--ggpm-gold)}
+.ggpm-dots{margin:0;padding:0;list-style:none;display:flex;gap:1cqw}
+.ggpm-dots li{height:1.3cqw;width:1.3cqw;border-radius:99cqw;background:var(--ggpm-dot-off);animation:ggpm-dot var(--ggpm-loop) linear infinite}
+.ggpm-ask{margin:.4cqw 0 0;font-family:'Yellowtail',cursive;font-size:3.6cqw;color:var(--ggpm-pop);text-shadow:var(--ggpm-glow)}
+
+@media (prefers-reduced-motion:reduce){.ggpm-photo,.ggpm-names span,.ggpm-dots li{animation-play-state:paused}}

@@ -1,0 +1,71 @@
+/* NEMPO Feed slide 57 — Car Free Day poster in slide 56's bright playful look. Colors in src/styles.css (.ncfd-root). */
+.ncfd-root {
+  position: relative; isolation: isolate; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;
+  container-type: inline-size; background: var(--ncfd-sky); color: var(--ncfd-white);
+  font-family: 'Fredoka', 'Poppins', sans-serif;
+}
+.ncfd-root * { box-sizing: border-box; }
+.ncfd-root p, .ncfd-root h2, .ncfd-root ol { margin: 0; padding: 0; }
+.ncfd-root ol { list-style: none; }
+
+/* CFD street artwork (1086×1448, exactly 3:4): it covers the whole slide, so the sky fills the top and the road
+   fills the bottom; a sky tint behind the title keeps the white lettering legible */
+.ncfd-photo { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.ncfd-root::before {
+  content: ''; position: absolute; z-index: 1; inset: 0 0 auto; height: 58cqw; pointer-events: none;
+  background: var(--ncfd-sky-tint);
+}
+
+/* Shared Nempo Feed header: keep its own fonts and colors */
+.ncfd-root .kmt-header { z-index: 8; font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif; }
+.ncfd-root .kmt-header * { letter-spacing: initial; }
+.ncfd-root .kmt-name { text-shadow: var(--ncfd-text-pop); }
+.ncfd-root .kmt-badge { background: color-mix(in srgb, var(--ncfd-navy) 60%, transparent); }
+
+/* AI-lettered bouncy white title (1705×695): the lettering carries its own deep-blue outline, so no extra shadow */
+.ncfd-title { position: absolute; z-index: 5; top: 15cqw; left: 0; right: 0; display: flex; justify-content: center; }
+.ncfd-title-art { display: block; width: 62cqw; height: auto; pointer-events: none; user-select: none; }
+.ncfd-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Sticker tagline with location pin */
+.ncfd-root .ncfd-tagline {
+  position: absolute; z-index: 6; top: 43cqw; left: 50%; transform: translateX(-50%) rotate(-3deg);
+  display: flex; align-items: center; gap: 1.2cqw;
+  padding: 1.4cqw 5.4cqw 1.6cqw 4.6cqw; border-radius: 99cqw; background: var(--ncfd-sun); color: var(--ncfd-navy);
+  font-weight: 700; font-size: 4.2cqw; line-height: 1; white-space: nowrap; box-shadow: 0 .6cqw 0 var(--ncfd-sun-deep);
+}
+.ncfd-tagline svg { width: 4.2cqw; height: 4.2cqw; flex: none; color: var(--ncfd-pink-deep); }
+
+/* Date line — tilted the same way as the sticker */
+.ncfd-release {
+  position: absolute; z-index: 6; top: 52cqw; left: 0; right: 0; text-align: center; transform: rotate(-3deg);
+  font-size: 2.5cqw; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; text-shadow: var(--ncfd-text-pop);
+}
+
+/* White card: question + four numbered answers above the shared footer */
+.ncfd-card {
+  position: absolute; z-index: 7; left: 5cqw; right: 5cqw; bottom: 15cqw; padding: 2.2cqw 3cqw 2.2cqw;
+  display: flex; flex-direction: column; align-items: center; gap: 1.6cqw;
+  background: var(--ncfd-card); border-radius: 4cqw; box-shadow: var(--ncfd-pop); color: var(--ncfd-navy);
+}
+.ncfd-question { font-size: 3.3cqw; font-weight: 700; line-height: 1.15; text-align: center; color: var(--ncfd-navy); }
+.ncfd-options { display: grid; grid-template-columns: repeat(4, auto); justify-content: center; gap: 1.4cqw; }
+.ncfd-options li {
+  display: flex; align-items: center; gap: 1cqw; padding: .8cqw 2cqw .8cqw .9cqw; border-radius: 99cqw;
+  font-size: 2.6cqw; font-weight: 600; line-height: 1; white-space: nowrap;
+  background: color-mix(in srgb, var(--ncfd-sun) 45%, var(--ncfd-white));
+}
+.ncfd-options li span {
+  flex: none; display: grid; place-items: center; width: 3.8cqw; height: 3.8cqw; border-radius: 50%;
+  background: var(--ncfd-sun); box-shadow: 0 .4cqw 0 var(--ncfd-sun-deep); font-size: 2.4cqw; font-weight: 700;
+}
+.ncfd-options li:nth-child(2) { background: color-mix(in srgb, var(--ncfd-pink) 35%, var(--ncfd-white)); }
+.ncfd-options li:nth-child(2) span { background: var(--ncfd-pink); box-shadow: 0 .4cqw 0 var(--ncfd-pink-deep); color: var(--ncfd-white); }
+.ncfd-options li:nth-child(3) { background: color-mix(in srgb, var(--ncfd-mint) 40%, var(--ncfd-white)); }
+.ncfd-options li:nth-child(3) span { background: var(--ncfd-mint); box-shadow: 0 .4cqw 0 color-mix(in srgb, var(--ncfd-mint) 60%, var(--ncfd-navy)); }
+.ncfd-options li:nth-child(4) { background: color-mix(in srgb, var(--ncfd-lilac) 40%, var(--ncfd-white)); }
+.ncfd-options li:nth-child(4) span { background: var(--ncfd-lilac); box-shadow: 0 .4cqw 0 color-mix(in srgb, var(--ncfd-lilac) 60%, var(--ncfd-navy)); color: var(--ncfd-white); }
+.ncfd-cta { font-size: 2.2cqw; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ncfd-sun-deep); }
+
+/* The shared NempoFooter supplies the same .kmt-footer pills as slide 35. */
+.ncfd-root .kmt-footer { z-index: 8; font-family: 'DM Sans', sans-serif; }

@@ -1,0 +1,66 @@
+# Roadmap
+
+- [x] GGS Story 09: five exact offers and Paket Happy, Feed branding, photo background and PNG matching the preview.
+- [x] GGS Story 09: add home/event booking information below the Happy Package and refresh the matching PNG.
+- [x] GGS Story 09: replace the background with an AI manicure photo and refresh the matching PNG.
+- [x] GGS Story 09: add Creambath 80.000 to the promo list (six offers) and refresh the matching PNG.
+
+- [x] GGS Feed slide 65: kotak Promo Pijat 85.000 seperti slide 25, tanpa foto/header/footer, unduhan PNG transparan.
+- [x] GGS Feed slide 66: kotak Promo Nail Art start 35.000 seperti slide 65, tanpa foto/header/footer, unduhan PNG transparan 3240×4320.
+
+- [x] Migrasi proyek dari github.com/nempocreative/remix-of-remix-of-remix-of-remix-of-remix-of-nempo-feed-migration-5-54f9b1b3 (kode, slide, gambar, tes)
+- [x] Pulihkan 26 foto/video dari proyek lama yang masih terbuka (GGS 63–64, Momen Digital, CFD 57, slide 59–62) — sudah diunggah ulang ke proyek ini dan sudah diuji tampil di pratinjau
+- [ ] Pulihkan 190 foto/video yang masih tersimpan di tiga proyek lama yang terkunci (9d460b8a 169, 5d83d26d 15, 102f7255 6) — menunggu pemilik mengirim file aslinya atau membuka akses proyek lama
+- [ ] Migrasi Tion Feed, MoU dan GGS Price List — setelah NEMPO Feed beres
+- [x] NEMPO Feed slide 56: desain ulang jadi poster ceria (gaya poster festival anak) dengan isi "Cara Kolaborasi" tetap
+- [x] Slide 56: gambar utama = ilustrasi KARTUN datar (gaya poster Kids Summer Fest, bukan foto) cafe/tempat wisata dengan panggung, penampil dan penonton; PNG unduhan dibuat ulang
+- [x] Slide 55 & 56: tombol Download PNG dibuat ulang dari pratinjau (3240×4320, file milik proyek ini) — dulu menunjuk berkas proyek lama yang 404
+- [x] Slide 56: desain ulang jadi poster film "gelap sinematik" (judul emas, tagline miring, baris rilis, blok kredit) — menggantikan poster ceria
+- [x] Slide 56: PNG unduhan dibuat ulang dari desain poster film (3240×4320)
+- [x] Slide 56: header disamakan dengan slide lain; PNG unduhan dibuat ulang
+- [x] Slide 56: footer disamakan dengan footer slide 35; PNG unduhan dibuat ulang
+- [x] Slide 56: judul diganti tulisan emas buatan AI (gaya judul film); PNG unduhan dibuat ulang
+- [x] Slide 56: judul pakai gaya huruf poster contoh "Suara Petualang!" (putih); PNG unduhan dibuat ulang
+- [x] Slide 56: latar diganti gambar panggung kelapa dari pemilik, semua tulisan dibuat lucu/ceria; PNG unduhan dibuat ulang
+- [x] Slide 56: baris "Segera di cafe & tempat wisata" dimiringkan sama seperti stiker di atasnya; PNG unduhan dibuat ulang
+- [x] NEMPO Feed slide 57: poster ceria Car Free Day Jl. Ibrahim Adjie Garut ("jajan apa?": Cilok & Cimol, Seblak, Bubur Ayam, Surabi), judul harus jelas terbaca; PNG unduhan
+- [x] NEMPO Feed slide 58: Car Free Day Jl. Ibrahim Adji Garut dengan info dari internet; gambar harus FOTO ASLI dari internet (bukan ilustrasi AI)
+- [x] GGS Story slide 08: video pijat estetik (close-up kaki lalu tangan) dengan teks "Massage time" di tengah + download MP4
+- [ ] GGS Story slide 08: bingkai header/footer Story belum dipasang — menunggu pemilik mengirim ulang gambar bingkainya (media proyek lama tidak ikut)
+- [x] NEMPO Feed slide 59 dst: layanan Momen Digital, karakter desain seperti slide 57, dengan gambaran web Year Book (contoh github.com/nempocreative/nempo-web-20); gambar dibuat ulang milik proyek ini; PNG unduhan
+- [x] NEMPO Feed slide 59–62: tanpa ikon/hiasan bintang (judul, poin, ikon, papan tulis); PNG unduhan dibuat ulang
+- [x] NEMPO Feed slide 59–62: baris teks di bawah pita kuning dihapus; PNG unduhan dibuat ulang
+- [x] GGS Feed slide 63: promo Perawatan ujung rambut sampai ujung kaki Rp 250.000 (24 Nov–5 Des 2026) + Download PNG 3240×4320
+- [x] GGS Feed slide 63: perbaiki bentuk (shape) tanggal; PNG unduhan dibuat ulang
+- [x] GGS 63: hapus strip putih bawah di unduhan + huruf k/g judul jangan terpotong
+- [x] GGS 63: unduhan tanpa garis putih di tepi (sama seperti pratinjau)
+- [x] Cek semua unduhan PNG: garis putih di tepi atas GGS 19 juga dihapus
+- [x] GGS Feed slide 64: Hari Guru 25 Nov 2026 — promo hari ini saja, Massage Rp 85.000 & Creambath Rp 80.000 + Download PNG 3240×4320
+- [x] NEMPO Feed slide 64: poster peringatan Hari Guru 25 Nov 2026 (ucapan saja, tanpa promo, tanpa bintang) + Download PNG 3240×4320
+- [x] NEMPO Feed slide 63: satu foto DJ saja (foto kacamata hitam di kanan dihapus), label "Guest DJ" jadi "DJ Dityar"
+- [x] NEMPO Feed slide 63: ganti strip putih bawah dengan kartu kontak bundar, nomor telepon dan akun sosial tetap
+- [x] Slide 63: rapikan kartu kontak menjadi dua kartu sejajar, tulisan lebih besar dan akun sosial dikelompokkan
+- [x] Slide 63: samakan footer dengan slide 62, sederhana dan rapi dengan kontak tetap
+- [x] Slide 63: hapus akun Instagram Kala Muda dari footer, sisakan @nempo.id
+- [x] Slide 63: PNG tajam 3240×4320 sesuai tampilan terbaru, hubungkan tombol dan uji hasil unduhan (file identik dengan tangkapan berkualitas tinggi)
+- [x] Slide 65: versi Story 9:16 poster slide 63 dan unduhan PNG 3240×5760, diuji identik dengan tangkapan pratinjau
+- [x] Slide 63: foto MC jangan dihapus; letakkan DJ di sisi kanan yang kosong (juga versi Story 65), lalu unduhan PNG dibuat ulang
+- [x] Slide 63: foto kaus hijau tetap di kiri sebagai MC, kanan pakai foto DJ Dityar yang benar (juga Story 65)
+- [x] Slide 63: kecilkan font tanggal supaya "Jumat" tidak mepet ke kotak
+- [x] Slide 63/65: bersihkan sisa latar (kotak samar) di belakang foto MC dan DJ
+- [x] Slide 63/65: foto MC kembali ke potongan asli yang halus (kepala utuh), unduhan dibuat ulang
+- [x] Slide 63/65: hasil unduhan disamakan dengan pratinjau terbaru (diuji lewat tombol unduh)
+- [x] Slide 65: Story disusun ulang — poster utuh di tengah, warna tepi poster memanjang ke atas/bawah, hook "HARI INI!" + tanggal di atas, kontak di bawah lebih besar; unduhan 1440×2560 diuji identik dengan pratinjau
+- [x] Slide 65 dipindah dari NEMPO Feed ke tab NEMPO Story (slide 02)
+- [x] NEMPO Story slide 02 (Bajidoran): susunan dibuat seperti Story slide 01 (bingkai panggung, pill tanggal, logo)
+- [x] Story slide 02: lampu panggung menyorot poster + video MP4 lampu bergerak
+- [x] Story slide 02: header turun sedikit
+- [x] Story slide 02: lampu hanya di pojok luar, tanpa tiang, sorotan natural
+- [x] Story slide 02: video kualitas tinggi, tidak pecah
+- [x] NEMPO Story slide 01 ("Today") dihapus — Story tinggal satu slide (Bajidoran)
+- [x] Bumper NEMPO: ukuran pratinjau vertikal 1080×1440 (ukuran asli 1440×1080 diputar, bukan Story 9:16)
+- [x] Bumper NEMPO: tirai merah berlipat membuka dari tengah seperti Bumper Acara, logo NEMPO tetap fokus
+- [x] Bumper NEMPO: tagline Event Organizer / Tim Kreatif, susunan logo dan teks terpisah agar tidak bertumpuk
+- [x] Bumper acara NEMPO: gaya retro city-pop 1980-an (papan nama NEMPO di atas kaki, tulisan Jepang, pita berjalan, pagar kuning-hitam), vertikal 1080×1440 + download MP4 8 detik
+- [x] Bumper NEMPO: maskot rusa bertanduk megah gaya budaya Sunda Jawa Barat (bukan gaya Cina), animasi nyata + MP4
+- [x] Logo NEMPO 3D emas tanpa merubah bentuk, di tengah video rusa

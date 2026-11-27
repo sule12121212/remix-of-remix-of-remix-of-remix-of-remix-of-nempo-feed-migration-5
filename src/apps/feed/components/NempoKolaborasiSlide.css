@@ -1,0 +1,111 @@
+/* NEMPO Feed slides 55–56 — collab call for cafes & tourist spots, basic NEMPO blue (slide 45). Colors in src/styles.css (.nko-root). */
+.nko-root {
+  position: relative; isolation: isolate; width: 100%; aspect-ratio: 3 / 4; overflow: hidden;
+  container-type: inline-size; background: var(--nko-bg); color: var(--kmt-text);
+  font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif;
+}
+.nko-root * { letter-spacing: 0; box-sizing: border-box; }
+.nko-root p, .nko-root h2, .nko-root ol, .nko-root ul { margin: 0; padding: 0; }
+.nko-root ol, .nko-root ul { list-style: none; }
+.nko-root a { text-decoration: none; }
+
+.nko-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.nko-grid { position: absolute; inset: 0; background-image: var(--kmt-grid); background-size: 6cqw 6cqw; mask-image: radial-gradient(circle at 74% 32%, #000 0%, transparent 60%); }
+.nko-ring { position: absolute; border-radius: 50%; border: .3cqw solid var(--kmt-line); }
+.nko-ring-a { width: 74cqw; height: 74cqw; right: -24cqw; top: 6cqw; }
+.nko-ring-b { width: 54cqw; height: 54cqw; right: -14cqw; top: 16cqw; border-style: dashed; animation: nko-spin 60s linear infinite; }
+.nko-glow { position: absolute; width: 70cqw; height: 70cqw; right: -18cqw; top: 8cqw; background: var(--nko-glow); }
+@keyframes nko-spin { to { transform: rotate(360deg); } }
+
+.nko-hero { position: absolute; z-index: 3; top: 24cqw; left: 7.5cqw; width: 52cqw; display: flex; flex-direction: column; align-items: flex-start; gap: 2.6cqw; }
+.nko-hero--wide { width: 85cqw; }
+.nko-kicker {
+  display: inline-flex; align-items: center; gap: 1.2cqw; padding: 1cqw 2.2cqw 1cqw 1.8cqw; border-radius: 99px;
+  background: var(--nko-yellow); color: var(--nko-navy); font-size: 1.8cqw; font-weight: 800; line-height: 1;
+  text-transform: uppercase; letter-spacing: .1em !important;
+}
+.nko-kicker svg { width: 2.3cqw; height: 2.3cqw; }
+.nko-title { font-size: 7.4cqw; font-weight: 800; line-height: 1.02; letter-spacing: -.02em !important; text-shadow: var(--nko-text-shadow); white-space: nowrap; }
+.nko-title em { font-style: normal; color: var(--nko-yellow); }
+.nko-title--cara { font-size: 6.6cqw; }
+.nko-root .nko-sub { font-size: 2.4cqw; font-weight: 500; line-height: 1.4; color: var(--nko-soft); max-width: 50cqw; }
+
+/* Slide 55: two tilted venue cards on the right */
+.nko-venues { position: absolute; z-index: 3; right: 7.5cqw; top: 25cqw; width: 30cqw; height: 34cqw; }
+.nko-venue {
+  position: absolute; left: 0; right: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 1cqw;
+  padding: 2.4cqw; border-radius: 3.4cqw; line-height: 1; box-shadow: var(--nko-card-shadow);
+  animation: nko-float 6s ease-in-out infinite;
+}
+.nko-venue--cafe { top: 0; background: var(--nko-card); color: var(--nko-navy); --tilt: -4deg; transform: rotate(var(--tilt)); }
+.nko-venue--wisata { top: 17cqw; background: var(--nko-tile-yellow); color: var(--nko-navy); --tilt: 4deg; transform: rotate(var(--tilt)); animation-delay: -3s; }
+@keyframes nko-float { 0%, 100% { transform: translateY(0) rotate(var(--tilt)); } 50% { transform: translateY(-1cqw) rotate(var(--tilt)); } }
+.nko-venue-icon { display: grid; place-items: center; width: 5.4cqw; height: 5.4cqw; border-radius: 1.5cqw; background: var(--nko-navy); color: var(--nko-yellow); margin-bottom: .6cqw; }
+.nko-venue-icon svg { width: 2.8cqw; height: 2.8cqw; stroke-width: 1.75; }
+.nko-venue strong { font-size: 3cqw; font-weight: 800; }
+.nko-venue > span:last-child { font-size: 1.7cqw; font-weight: 600; color: var(--nko-navy-soft); }
+.nko-venue-plus { position: absolute; z-index: 2; left: -3.4cqw; top: 13cqw; display: grid; place-items: center; width: 6.4cqw; height: 6.4cqw; border-radius: 50%; background: var(--nko-navy); color: var(--nko-yellow); border: .4cqw solid var(--nko-yellow); box-shadow: var(--nko-card-shadow); }
+.nko-venue-plus svg { width: 3.2cqw; height: 3.2cqw; }
+
+.nko-bottom { position: absolute; z-index: 3; left: 7.5cqw; right: 7.5cqw; bottom: 7.5cqw; display: flex; flex-direction: column; gap: 2.6cqw; }
+.nko-label { display: flex; align-items: center; gap: 2cqw; font-size: 1.8cqw; font-weight: 800; line-height: 1; text-transform: uppercase; letter-spacing: .16em !important; color: var(--nko-yellow); white-space: nowrap; }
+.nko-label span { flex: 1; height: 1px; background: var(--kmt-line-strong); }
+
+.nko-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2cqw; }
+.nko-tile {
+  position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: flex-start; min-height: 17cqw;
+  padding: 2.8cqw 3cqw; border-radius: 3.6cqw; color: var(--nko-navy); line-height: 1; box-shadow: var(--nko-card-shadow);
+}
+.nko-tile--yellow { background: var(--nko-tile-yellow); }
+.nko-tile--white { background: var(--nko-tile-white); }
+.nko-tile--blue { background: var(--nko-tile-blue); }
+.nko-tile::after { content: ''; position: absolute; right: -6cqw; top: -6cqw; width: 16cqw; height: 16cqw; border-radius: 50%; background: var(--nko-tile-shine); }
+.nko-tile-icon { position: relative; z-index: 1; display: grid; place-items: center; width: 5cqw; height: 5cqw; border-radius: 1.4cqw; background: var(--nko-navy); color: var(--nko-card); box-shadow: var(--nko-icon-shadow); }
+.nko-tile-icon svg { width: 2.5cqw; height: 2.5cqw; stroke-width: 1.75; }
+.nko-tile strong { position: relative; z-index: 1; margin-top: auto; padding-top: 2cqw; font-size: 3.8cqw; font-weight: 800; letter-spacing: -.02em !important; }
+.nko-tile-desc { position: relative; z-index: 1; margin-top: 1cqw; font-size: 1.9cqw; font-weight: 600; color: var(--nko-navy-soft); }
+
+.nko-root .nko-next { align-self: center; display: inline-flex; align-items: center; gap: 1.2cqw; padding: 1.4cqw 2.8cqw; border-radius: 99px; background: var(--nko-glass); border: 1px solid var(--kmt-line-strong); font-size: 2cqw; font-weight: 700; line-height: 1; }
+.nko-next svg { width: 2.4cqw; height: 2.4cqw; color: var(--nko-yellow); animation: nko-nudge 1.4s ease-in-out infinite; }
+@keyframes nko-nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(.8cqw); } }
+
+/* Slide 56: benefits, steps, WhatsApp + channels */
+.nko-benefits { position: absolute; z-index: 3; top: 49cqw; left: 7.5cqw; right: 7.5cqw; display: grid; grid-template-columns: 1fr 1fr; gap: 1.8cqw; }
+.nko-benefit { display: flex; align-items: center; gap: 1.8cqw; padding: 2cqw 2.2cqw; border-radius: 3cqw; background: var(--nko-glass); border: 1px solid var(--kmt-line-strong); line-height: 1.15; }
+.nko-benefit-icon { flex: none; display: grid; place-items: center; width: 5.4cqw; height: 5.4cqw; border-radius: 1.5cqw; background: var(--nko-yellow); color: var(--nko-navy); }
+.nko-benefit-icon svg { width: 2.7cqw; height: 2.7cqw; stroke-width: 1.75; }
+.nko-benefit strong { font-size: 2.4cqw; font-weight: 700; }
+
+.nko-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8cqw; }
+.nko-step { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 1.6cqw; padding: 2.4cqw; border-radius: 3cqw; background: var(--nko-tile-white); color: var(--nko-navy); box-shadow: var(--nko-card-shadow); line-height: 1.15; }
+.nko-step:last-child { background: var(--nko-tile-yellow); }
+.nko-step-no { display: grid; place-items: center; width: 4.6cqw; height: 4.6cqw; border-radius: 50%; background: var(--nko-navy); color: var(--nko-yellow); font-size: 2.4cqw; font-weight: 800; line-height: 1; }
+.nko-step strong { font-size: 2.4cqw; font-weight: 800; }
+
+.nko-root .nko-wa {
+  display: flex; align-items: center; gap: 2.8cqw; padding: 2.6cqw 3cqw 2.6cqw 2.8cqw; border-radius: 99px;
+  background: var(--nko-card); color: var(--nko-navy); box-shadow: var(--nko-card-shadow);
+}
+.nko-wa-icon { flex: none; display: grid; place-items: center; width: 7cqw; height: 7cqw; border-radius: 50%; background: var(--nko-wa); color: var(--nko-card); }
+.nko-wa-icon svg { width: 3.6cqw; height: 3.6cqw; }
+.nko-wa-text { flex: 1; display: flex; flex-direction: column; gap: 1.1cqw; line-height: 1; }
+.nko-wa-text span { font-size: 2cqw; font-weight: 600; color: var(--nko-navy-soft); }
+.nko-wa-text strong { font-size: 5cqw; font-weight: 800; letter-spacing: -.01em !important; }
+.nko-wa-go { flex: none; display: grid; place-items: center; width: 5.6cqw; height: 5.6cqw; border-radius: 50%; background: var(--nko-yellow); color: var(--nko-navy); }
+.nko-wa-go svg { width: 2.8cqw; height: 2.8cqw; }
+
+.nko-channels { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2cqw; }
+.nko-root .nko-channel {
+  display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 2cqw; row-gap: .9cqw; align-items: center; padding: 1.8cqw 2.4cqw 1.8cqw 2cqw; border-radius: 99px;
+  background: var(--nko-glass); border: 1px solid var(--kmt-line-strong); color: var(--kmt-text); line-height: 1;
+}
+.nko-channel-icon { grid-row: 1 / 3; display: grid; place-items: center; width: 4.6cqw; height: 4.6cqw; border-radius: 50%; color: var(--nko-card); }
+.nko-channel-icon svg { width: 2.4cqw; height: 2.4cqw; }
+.nko-channel--instagram .nko-channel-icon { background: var(--nko-ig); }
+.nko-channel--tiktok .nko-channel-icon { background: var(--nko-tt); }
+.nko-channel-name { align-self: end; font-size: 1.8cqw; font-weight: 500; color: var(--nko-soft); }
+.nko-channel strong { align-self: start; font-size: 2.8cqw; font-weight: 800; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nko-ring-b, .nko-venue, .nko-next svg { animation: none; }
+}

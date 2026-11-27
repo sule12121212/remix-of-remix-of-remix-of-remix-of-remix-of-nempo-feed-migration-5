@@ -1,0 +1,43 @@
+/* GGS Feed slide 64 — Hari Guru one-day promo. Scoped gghg- styles; colors live in src/styles.css.
+   Layout (cqw, slide is 100 × 133.3): two separate zones — text 20–86, still-life objects 89–119 — so nothing overlaps. */
+.gghg-root {
+  position: relative; width: 100%; aspect-ratio: 3 / 4; overflow: hidden; container-type: inline-size;
+  background: var(--gghg-wall); font-family: 'DM Sans', sans-serif; color: var(--gghg-plum);
+}
+.gghg-root * { letter-spacing: 0; box-sizing: border-box; }
+.gghg-root :where(p, h2) { margin: 0; padding: 0; }
+
+/* Still life (1536×1024) at full width = 66.7cqw tall; its objects fill the lower part (89–119cqw) and its empty wall fades into the slide wall. */
+.gghg-photo {
+  position: absolute; left: 0; top: 57cqw; width: 100cqw; height: 66.667cqw; object-fit: cover; display: block;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%); mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
+}
+.gghg-veil { position: absolute; inset: 0; background: var(--gghg-veil); pointer-events: none; }
+
+.gghg-head { position: absolute; top: 21.5cqw; left: 5cqw; right: 5cqw; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.gghg-date {
+  padding: .9cqw 3.4cqw; border-radius: 99cqw; background: var(--gghg-plum); color: var(--gghg-cream);
+  font-size: 2.5cqw; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; line-height: 1.2; white-space: nowrap;
+}
+.gghg-title { margin-top: 2.4cqw; font-family: 'Playfair Display', Georgia, serif; line-height: 1; }
+.gghg-title-top { display: block; font-size: 5.4cqw; font-style: italic; font-weight: 500; color: var(--gghg-pink); }
+.gghg-title-main { display: block; margin-top: -.4cqw; font-size: 14cqw; font-weight: 700; color: var(--gghg-plum); padding-bottom: .12em; }
+.gghg-thanks { margin-top: .4cqw; font-size: 3.1cqw; font-weight: 600; color: var(--gghg-plum-soft); }
+
+.gghg-promo { position: absolute; top: 57.5cqw; left: 7cqw; right: 7cqw; display: flex; flex-direction: column; align-items: center; }
+.gghg-promo-label { position: relative; z-index: 1; margin-bottom: 2cqw; }
+.gghg-promo-label span {
+  display: inline-block; padding: 1cqw 3.6cqw; border-radius: 99cqw; background: var(--gghg-pink); color: var(--gghg-cream);
+  font-size: 2.7cqw; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; line-height: 1.2; white-space: nowrap;
+  box-shadow: var(--gghg-pill-shadow);
+}
+.gghg-cards { display: flex; gap: 2.4cqw; width: 100%; }
+.gghg-card {
+  flex: 1; display: flex; flex-direction: column; align-items: center; padding: 2.6cqw 2cqw 2.2cqw; border-radius: 4cqw;
+  background: var(--gghg-card); border: .25cqw solid var(--gghg-card-edge); box-shadow: var(--gghg-card-shadow);
+}
+.gghg-card-name { font-size: 3.2cqw; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; line-height: 1.2; color: var(--gghg-pink-soft); }
+.gghg-card-price { display: inline-flex; align-items: baseline; gap: 1cqw; font-family: 'Playfair Display', Georgia, serif; font-size: 9.6cqw; font-weight: 700; line-height: 1.1; color: var(--gghg-cream); }
+.gghg-card-price small { font-size: 3.6cqw; font-style: italic; font-weight: 500; color: var(--gghg-pink-soft); }
+
+.gghg-watermark { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }

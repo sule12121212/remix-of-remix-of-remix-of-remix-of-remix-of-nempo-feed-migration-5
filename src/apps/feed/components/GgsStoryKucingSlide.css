@@ -1,0 +1,13 @@
+.ggsk-root{position:relative;isolation:isolate;width:min(100%,45vh);max-width:100%;aspect-ratio:9/16;overflow:hidden;container-type:inline-size;background:var(--ggsk-blush);font-family:'DM Sans',sans-serif;color:var(--ggsk-cream);box-shadow:0 24px 70px color-mix(in srgb,var(--ggsk-ink) 22%,transparent)}
+.ggsk-root--overlay{background:transparent;box-shadow:none}
+.ggsk-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ggsk-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:var(--ggsk-shade)}
+
+/* Call-to-action sits just above the footer band (footer starts at 92.1% of the height). */
+.ggsk-copy{position:absolute;z-index:2;left:6cqw;right:6cqw;bottom:19cqw;display:flex;flex-direction:column;align-items:center;text-align:center;text-shadow:var(--ggsk-text-shadow)}
+.ggsk-kicker{margin:0;font-size:2.6cqw;font-weight:600;line-height:1;letter-spacing:.32em;padding-left:.32em;text-transform:uppercase;color:var(--ggsk-gold)}
+.ggsk-title{margin:2cqw 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:11.5cqw;line-height:1;color:var(--ggsk-cream)}
+.ggsk-line{margin:2cqw 0 0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:4.4cqw;line-height:1.2;color:var(--ggsk-cream)}
+.ggsk-cta{margin:3.2cqw 0 0;padding:1.6cqw 4.6cqw;border:.25cqw solid var(--ggsk-gold);border-radius:999px;font-size:2.6cqw;font-weight:700;line-height:1;letter-spacing:.24em;text-transform:uppercase;text-shadow:none;color:var(--ggsk-cream);background:var(--ggsk-pill)}
+
+.ggsk-overlay{position:absolute;inset:0;z-index:3;width:100%;height:100%;pointer-events:none;user-select:none}
