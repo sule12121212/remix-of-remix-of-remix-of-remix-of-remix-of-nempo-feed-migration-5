@@ -15,6 +15,8 @@
 
 - [x] Migrasi proyek dari github.com/nempocreative/remix-of-remix-of-remix-of-remix-of-remix-of-nempo-feed-migration-5-54f9b1b3 (kode, slide, gambar, tes)
 - [x] Pulihkan 26 foto/video dari proyek lama yang masih terbuka (GGS 63–64, Momen Digital, CFD 57, slide 59–62) — sudah diunggah ulang ke proyek ini dan sudah diuji tampil di pratinjau
+- [x] Pulihkan 3 aset Bajidoran yang 404 (poster feed 63, poster Story 02, video lampu Story 02) — diunduh dari pratinjau proyek lama 6199f398 lalu diunggah ulang jadi milik proyek ini; sudah diuji tampil di pratinjau
+- [ ] Pulihkan 20 foto/video yang masih 404 di pratinjau (13 foto Good Story Cafe, logo + judul Garut Beans, logo MusiComedy, bingkai GGS Cowok) — semuanya milik proyek lama 9d460b8a yang terkunci (401), menunggu pemilik mengirim file aslinya atau membuka akses proyek lama
 - [ ] Pulihkan 190 foto/video yang masih tersimpan di tiga proyek lama yang terkunci (9d460b8a 169, 5d83d26d 15, 102f7255 6) — menunggu pemilik mengirim file aslinya atau membuka akses proyek lama
 - [ ] Migrasi Tion Feed, MoU dan GGS Price List — setelah NEMPO Feed beres
 - [x] NEMPO Feed slide 56: desain ulang jadi poster ceria (gaya poster festival anak) dengan isi "Cara Kolaborasi" tetap
