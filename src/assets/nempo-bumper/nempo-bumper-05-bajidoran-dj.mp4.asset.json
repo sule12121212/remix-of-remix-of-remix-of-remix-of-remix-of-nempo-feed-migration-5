@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "b6a5e7d1-45b3-445c-8ec6-8deeaa0b3503",
-  "project_id": "6c99d8a5-af7d-4066-9a28-833b5185868f",
-  "url": "/__l5e/assets-v1/b6a5e7d1-45b3-445c-8ec6-8deeaa0b3503/nempo-bumper-05-bajidoran-dj.mp4",
-  "r2_key": "a/v1/6c99d8a5-af7d-4066-9a28-833b5185868f/b6a5e7d1-45b3-445c-8ec6-8deeaa0b3503/nempo-bumper-05-bajidoran-dj.mp4",
-  "original_filename": "nempo-bumper-05-bajidoran-dj.mp4",
-  "size": 6672802,
   "content_type": "video/mp4",
-  "created_at": "2026-11-27T07:05:35Z"
+  "created_at": "2026-11-27T07:05:35Z",
+  "original_filename": "nempo-bumper-05-bajidoran-dj.mp4",
+  "project_id": "d42637fa-847b-49fa-85c5-6e08bc265622",
+  "r2_key": "a/v1/d42637fa-847b-49fa-85c5-6e08bc265622/b6a5e7d1-45b3-445c-8ec6-8deeaa0b3503/nempo-bumper-05-bajidoran-dj.mp4",
+  "size": 6672802,
+  "url": "/__l5e/assets-v1/b6a5e7d1-45b3-445c-8ec6-8deeaa0b3503/nempo-bumper-05-bajidoran-dj.mp4",
+  "version": 1
 }

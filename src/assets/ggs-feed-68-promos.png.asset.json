@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "0c47dd25-6413-4631-93d8-9dce935e6519",
-  "project_id": "6c99d8a5-af7d-4066-9a28-833b5185868f",
-  "url": "/__l5e/assets-v1/0c47dd25-6413-4631-93d8-9dce935e6519/ggs-feed-68-promos.png",
-  "r2_key": "a/v1/6c99d8a5-af7d-4066-9a28-833b5185868f/0c47dd25-6413-4631-93d8-9dce935e6519/ggs-feed-68-promos.png",
-  "original_filename": "ggs-feed-68-promos.png",
-  "size": 4680989,
   "content_type": "image/png",
-  "created_at": "2026-11-27T06:38:41Z"
+  "created_at": "2026-11-27T06:38:41Z",
+  "original_filename": "ggs-feed-68-promos.png",
+  "project_id": "d42637fa-847b-49fa-85c5-6e08bc265622",
+  "r2_key": "a/v1/d42637fa-847b-49fa-85c5-6e08bc265622/0c47dd25-6413-4631-93d8-9dce935e6519/ggs-feed-68-promos.png",
+  "size": 4680989,
+  "url": "/__l5e/assets-v1/0c47dd25-6413-4631-93d8-9dce935e6519/ggs-feed-68-promos.png",
+  "version": 1
 }
