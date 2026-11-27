@@ -104,6 +104,9 @@
   --ggx-shade: linear-gradient(180deg, color-mix(in srgb, #fff5fa 88%, transparent) 0%, color-mix(in srgb, #fff5fa 90%, transparent) 38%, color-mix(in srgb, #fff5fa 55%, transparent) 54%, transparent 70%);
 }
 /* GGS Feed slide 25 (3:4): nail art promo palette. */
+.ggdn-root {
+  --ggdn-ring: #ffffff;
+}
 .ggsp-root {
   --ggsp-white: #ffffff;
   --ggsp-pink: #f33e83;

@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] GGS Feed slide 69: December Nail Edit, sembilan pilihan nail art natural dalam bulatan GGS; PNG 3240×4320 diuji identik lewat tombol unduh, tampilan ponsel dan komputer tanpa tulisan bertumpuk.
+
 - [x] NEMPO Story slide 02: ruang transparan diperbesar menjadi sekitar 78% tinggi Story agar video tidak banyak terpotong; PNG direkam ulang dan unduhan diuji identik.
 - [x] NEMPO Story slide 02: bingkai live report oranye-emas dengan tengah transparan, PNG 3240×5760 tanpa unduhan video; poster Bajidoran tetap sebagai slide 01.
 
