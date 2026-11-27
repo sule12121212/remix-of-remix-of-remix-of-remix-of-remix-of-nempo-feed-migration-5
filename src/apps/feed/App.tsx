@@ -144,6 +144,7 @@ import { NempoLogoOpening } from './components/NempoLogoOpening';
 import { DangdutHalloweenBumper } from './components/DangdutHalloweenBumper';
 import { NempoBarBumper } from './components/NempoBarBumper';
 import NempoBumperTitle from './components/NempoBumperTitle';
+import NempoBumperLineup from './components/NempoBumperLineup';
 import { Button } from '@/components/ui/button';
 import { renderNempoSlide20Png } from './lib/renderNempoSlide20Png';
 import {
@@ -236,6 +237,7 @@ import { NempoStoryTodaySlide } from './components/NempoStoryTodaySlide';
 import nempoStoryBajidoranMp4 from '@/assets/nempo-story/nempo-story-02-bajidoran-lampu.mp4.asset.json';
 import nempoBarBumperMp4 from '@/assets/nempo-bumper/nempo-rusa-bumper-kecil.mp4.asset.json';
 import nempoBajidoranBumperMp4 from '@/assets/nempo-bumper/nempo-bumper-05-bajidoran-dj-anim.mp4.asset.json';
+import nempoLineupBumperMp4 from '@/assets/nempo-bumper/nempo-bumper-06-pengisi-acara.mp4.asset.json';
 import nempoStoryBajidoranPng from '@/assets/nempo-story/nempo-story-02-bajidoran.png.asset.json';
 import ggsPovScrubPng from '@/assets/ggs-feed-53-pov-playlist-owner.png.asset.json';
 import ggsPromoAkhirTahunPng from '@/assets/ggs-feed-60-promo-akhir-tahun.png.asset.json';
@@ -3267,6 +3269,7 @@ function App() {
     | 'bumper-dangdut'
     | 'bumper-nempo'
     | 'bumper-bajidoran'
+    | 'bumper-lineup'
   >('nempo');
   const [activeSlide, setActiveSlide] = useState<FeedSlide>(32);
   const [activeClientSlide, setActiveClientSlide] = useState<ClientSlide>(3);
@@ -3280,6 +3283,7 @@ function App() {
   } | null>(null);
   const [downloadError, setDownloadError] = useState<string | null>(null);
   const [nbtCapture, setNbtCapture] = useState(false);
+  const [nblCapture, setNblCapture] = useState(false);
   const exportRef = useRef<HTMLElement | null>(null);
 
   /** Bumper 5 recording pass: `?nbt=css` swaps the whole page for the lettering-only stage. */
@@ -3287,6 +3291,7 @@ function App() {
     setNbtCapture(
       new URLSearchParams(window.location.search).get('nbt') === 'css',
     );
+    setNblCapture(new URLSearchParams(window.location.search).get('nbl') === 'css');
   }, []);
   const isNempoFeed = activeFeed === 'nempo';
   const isHighQualityNempoStorySlide =
@@ -3297,7 +3302,9 @@ function App() {
   const isBumper = activeFeed === 'bumper' || activeFeed === 'bumper-logo' || activeFeed === 'bumper-dangdut';
   const isDangdutBumper = activeFeed === 'bumper-dangdut';
   const isBajidoranBumper = activeFeed === 'bumper-bajidoran';
-  const isNempoBumper = activeFeed === 'bumper-nempo' || isBajidoranBumper;
+  const isLineupBumper = activeFeed === 'bumper-lineup';
+  const isNempoBumper = activeFeed === 'bumper-nempo' || isBajidoranBumper || isLineupBumper;
+  const nempoBumperMp4 = isLineupBumper ? nempoLineupBumperMp4.url : isBajidoranBumper ? nempoBajidoranBumperMp4.url : nempoBarBumperMp4.url;
   const isLogoBumper = activeFeed === 'bumper-logo';
   const isPhotobooth = activeFeed === 'photobooth';
   const isMemberCard = activeFeed === 'member-card';
@@ -3603,6 +3610,10 @@ function App() {
     isGgsFeed ? activeClientSlide : activeSlide;
 
   /** Bumper 5 recording pass: `?nbt=css` renders the lettering-only stage for frame capture. */
+  /** Bumper 6 recording pass: `?nbl=css` renders the performer line-up stage for frame capture. */
+  if (nblCapture) {
+    return <NempoBumperLineup />;
+  }
   if (nbtCapture) {
     return <NempoBumperTitle />;
   }
@@ -3674,6 +3685,7 @@ function App() {
           <Button role="tab" aria-selected={isDangdutBumper} onClick={() => setActiveFeed('bumper-dangdut')} className="mc-bumper-tab" variant="ghost" size="sm">Bumper 3 · Dangdut Halloween</Button>
           <Button role="tab" aria-selected={activeFeed === 'bumper-nempo'} onClick={() => setActiveFeed('bumper-nempo')} className="nbb-tab" variant="ghost" size="sm">Bumper 4 · NEMPO Bar</Button>
           <Button role="tab" aria-selected={isBajidoranBumper} onClick={() => setActiveFeed('bumper-bajidoran')} className="nbb-tab" variant="ghost" size="sm">Bumper 5 · Bajidoran DJ</Button>
+          <Button role="tab" aria-selected={isLineupBumper} onClick={() => setActiveFeed('bumper-lineup')} className="nbb-tab" variant="ghost" size="sm">Bumper 6 · Pengisi Acara</Button>
           <button
             type="button"
             role="tab"
@@ -3804,7 +3816,7 @@ function App() {
         )}
         {isNempoBumper && (
           <div className="mb-3 flex flex-col items-center gap-2">
-            <PrebuiltVideoDownload key={activeFeed} src={isBajidoranBumper ? nempoBajidoranBumperMp4.url : nempoBarBumperMp4.url} fileName={isBajidoranBumper ? 'Nempo-Bumper-05-Bajidoran-DJ.mp4' : 'Nempo-Bar-Bumper.mp4'} />
+            <PrebuiltVideoDownload key={activeFeed} src={nempoBumperMp4} fileName={isLineupBumper ? 'Nempo-Bumper-06-Pengisi-Acara.mp4' : isBajidoranBumper ? 'Nempo-Bumper-05-Bajidoran-DJ.mp4' : 'Nempo-Bar-Bumper.mp4'} />
           </div>
         )}
         {isGgsMen && ggsMenSlide === 11 && (
@@ -4754,7 +4766,7 @@ function App() {
         ) : isRundown ? (
           <MusiComedyRundown exportRef={exportRef} />
         ) : isNempoBumper ? (
-          <NempoBarBumper key={activeFeed} src={isBajidoranBumper ? nempoBajidoranBumperMp4.url : nempoBarBumperMp4.url} title={isBajidoranBumper ? nempoBajidoranFest.title : 'NEMPO'} />
+          <NempoBarBumper key={activeFeed} src={nempoBumperMp4} title={isLineupBumper ? `Pengisi acara ${nempoBajidoranFest.title}` : isBajidoranBumper ? nempoBajidoranFest.title : 'NEMPO'} />
         ) : isDangdutBumper ? (
           <DangdutHalloweenBumper />
         ) : isLogoBumper ? (
