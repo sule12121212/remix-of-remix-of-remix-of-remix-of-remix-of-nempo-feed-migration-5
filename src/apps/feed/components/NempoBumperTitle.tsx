@@ -127,6 +127,7 @@ export default function NempoBumperTitle() {
   const burstRef = useRef<HTMLDivElement | null>(null);
   const frameRef = useRef<HTMLDivElement | null>(null);
   const crestRef = useRef<HTMLDivElement | null>(null);
+  const organizerRef = useRef<HTMLDivElement | null>(null);
   const beamLeftRef = useRef<HTMLDivElement | null>(null);
   const beamRightRef = useRef<HTMLDivElement | null>(null);
   const ringRippleRef = useRef<HTMLDivElement | null>(null);
@@ -175,6 +176,10 @@ export default function NempoBumperTitle() {
       if (crestRef.current) {
         crestRef.current.style.transform = `translateX(-50%) scaleX(${f.crestScaleX})`;
         crestRef.current.style.opacity = `${f.frameOpacity}`;
+      }
+      if (organizerRef.current) {
+        organizerRef.current.style.opacity = `${f.opacity}`;
+        organizerRef.current.style.transform = `translateX(-50%) translateY(${f.float * 0.5}px)`;
       }
       if (beamLeftRef.current) {
         beamLeftRef.current.style.transform = `rotate(${f.beamLeftDeg}deg)`;
@@ -279,6 +284,9 @@ export default function NempoBumperTitle() {
           <div className="nbt-glint nbt-glint-sharp" ref={glint2Ref} />
         </div>
 
+        <div className="nbt-organizer" ref={organizerRef}>
+          <span>Organized by</span> NEMPO.id
+        </div>
         {/* Ornamental gold crest divider below title */}
         <div className="nbt-crest" ref={crestRef} aria-hidden="true">
           <svg viewBox="0 0 680 44" width="680" height="44">

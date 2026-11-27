@@ -72,3 +72,4 @@
 - [x] Bumper acara NEMPO: gaya retro city-pop 1980-an (papan nama NEMPO di atas kaki, tulisan Jepang, pita berjalan, pagar kuning-hitam), vertikal 1080×1440 + download MP4 8 detik
 - [x] Bumper NEMPO: maskot rusa bertanduk megah gaya budaya Sunda Jawa Barat (bukan gaya Cina), animasi nyata + MP4
 - [x] Logo NEMPO 3D emas tanpa merubah bentuk, di tengah video rusa
+- [x] Bumper 5: tambah tulisan "Organized by NEMPO.id" di bawah judul, video direkam ulang.
