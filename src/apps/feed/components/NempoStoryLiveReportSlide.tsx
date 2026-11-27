@@ -1,7 +1,7 @@
 import type { RefObject } from 'react';
 import gscLogo from '@/assets/good-story-cafe-logo.jpg';
 import saduliLogo from '@/assets/saduli-ragap-entertainment-logo-keyed.png';
-import { nempoStoryBajidoran, nempoStoryLiveReport } from './nempo-story-today';
+import { nempoStoryLiveReport } from './nempo-story-today';
 import './NempoAjakRequestSlide.css';
 import './KalaMudaRecruitSlide.css';
 import './NempoStoryLiveReportSlide.css';
@@ -12,7 +12,6 @@ import './NempoStoryLiveReportSlide.css';
  */
 export function NempoStoryLiveReportSlide({ exportRef }: { exportRef?: RefObject<HTMLElement | null> }) {
   const P = nempoStoryLiveReport;
-  const { date } = nempoStoryBajidoran;
 
   return (
     <section
@@ -53,7 +52,6 @@ export function NempoStoryLiveReportSlide({ exportRef }: { exportRef?: RefObject
       </div>
 
       <footer className="nslr-footer">
-        <p><b>{date.weekday}</b><span aria-hidden="true">•</span>{date.day} {date.month} {date.year}</p>
         <span>{P.venue}</span>
       </footer>
     </section>

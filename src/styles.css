@@ -3002,13 +3002,11 @@ html, body, #root {
   --nslr-pattern: repeating-linear-gradient(115deg, transparent 0, transparent 3.2cqw, color-mix(in srgb, #fff4e2 12%, transparent) 3.2cqw, color-mix(in srgb, #fff4e2 12%, transparent) 3.55cqw);
   --nslr-inner-line: color-mix(in srgb, #ffe0b8 72%, transparent);
   --nslr-live-dot: #fff4e2;
-  --nslr-date-pill: color-mix(in srgb, #7a2408 78%, transparent);
   --nslr-panel-shadow: 0 1.2cqw 2.8cqw color-mix(in srgb, #5a1a02 32%, transparent);
   --nslr-panel-shadow-reverse: 0 -1.2cqw 2.8cqw color-mix(in srgb, #5a1a02 32%, transparent);
   --nslr-title-shadow: 0 .45cqw 0 #9e2d0a, 0 1cqw 2.2cqw color-mix(in srgb, #5a1a02 58%, transparent);
   --nslr-text-shadow: 0 .3cqw 1.2cqw color-mix(in srgb, #5a1a02 70%, transparent);
   --nslr-live-glow: 0 0 1.8cqw color-mix(in srgb, #fff4e2 75%, transparent);
-  --nslr-pill-shadow: 0 .6cqw 1.6cqw color-mix(in srgb, #5a1a02 35%, transparent);
 }
 
 /* Nempo Bar Bumper: reusable NEMPO event bumper palette (retro city-pop billboard cityscape). */
