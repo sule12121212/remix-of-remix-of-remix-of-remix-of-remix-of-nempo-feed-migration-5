@@ -4,6 +4,8 @@ import ggsPromoPijatPng from '@/assets/ggs-feed-65-promo-pijat.png';
 import ggsPromoNailArtPng from '@/assets/ggs-feed-66-promo-nail-art.png';
 import { GgsPromoNailArtSlide } from './components/GgsPromoNailArtSlide';
 import { GgsFeedPromosSlide } from './components/GgsFeedPromosSlide';
+import ggsFeed67PromosPng from '@/assets/ggs-feed-67-promos.png.asset.json';
+import ggsFeed68PromosPng from '@/assets/ggs-feed-68-promos.png.asset.json';
 import slide32VideoAsset from '@/assets/nempo-feed-slide-32.mp4.asset.json';
 import slide33VideoAsset from '@/assets/nempo-feed-slide-33.mp4.asset.json';
 import slide34VideoAsset from '@/assets/nempo-feed-slide-34.mp4.asset.json';
@@ -4101,6 +4103,14 @@ function App() {
                   PNG 3240×4320. Di iPad/iPhone pilih “Simpan Gambar” atau “Simpan ke File”; jika gambar terbuka, tekan lama lalu Simpan.
                 </p>
               </>
+            ) : activeFeed === 'client' && (activeClientSlide === 67 || activeClientSlide === 68) ? (
+              <PrebuiltPngDownload
+                key={`ggs-feed-${activeClientSlide}`}
+                src={activeClientSlide === 67 ? ggsFeed67PromosPng.url : ggsFeed68PromosPng.url}
+                fileName={activeClientSlide === 67 ? 'GGS-Feed-67-Daftar-Promo.png' : 'GGS-Feed-68-Paket-Happy.png'}
+                label="Download PNG · 3×"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-bold text-primary-foreground"
+              />
             ) : activeFeed === 'client' && activeClientSlide === 66 ? (
               <PrebuiltPngDownload
                 key="ggs-feed-66"

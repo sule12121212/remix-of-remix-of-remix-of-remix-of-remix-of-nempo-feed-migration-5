@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] GGS Feed 67–68: samakan unduhan PNG dengan pratinjau dan uji kedua tombol unduh (3240×4320, file identik di layar kecil/besar).
+
 - [x] GGS Story 09: five exact offers and Paket Happy, Feed branding, photo background and PNG matching the preview.
 - [x] GGS Story 09: add home/event booking information below the Happy Package and refresh the matching PNG.
 - [x] GGS Story 09: replace the background with an AI manicure photo and refresh the matching PNG.
