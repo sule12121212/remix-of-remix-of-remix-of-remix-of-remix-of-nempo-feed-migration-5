@@ -15,6 +15,14 @@ export const nempoStoryLiveReport = {
   transparentCenter: true,
 } as const;
 
+/** Story slide 03: slide 01's stage with the invitation wording (owner's idea, polished). */
+export const nempoStoryAjakan = {
+  kicker: 'Hari Ini',
+  headline: ['Kita Seru-seruan', 'Bareng!'],
+  invite: 'Yuk, merapat ke',
+  venue: 'Good Story Cafe',
+} as const;
+
 /** Prebuilt PNGs are captured from the preview at 1080 CSS px × 3. */
 export const NEMPO_STORY_EXPORT = { width: 3240, height: 5760 } as const;
 export const NEMPO_STORY_LIVE_EXPORT = { width: 3240, height: 5760 } as const;

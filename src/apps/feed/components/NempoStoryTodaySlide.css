@@ -72,3 +72,21 @@
 .nst-bj-spots .nar-beam { height: 150cqw; width: 34cqw; margin-left: -17cqw; opacity: .45; filter: blur(2.2cqw); clip-path: polygon(47% 0,53% 0,100% 100%,0 100%); -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent); mask-image: linear-gradient(to bottom, #000 30%, transparent); }
 .nst-bj-lamps .nar-lamp { width: 12cqw; height: 12cqw; margin: -6cqw 0 0 -6cqw; }
 .nst-bj-lamps { z-index: 7; }
+
+/* Story slide 03 (invitation): wording above a smaller poster, venue pill under it. */
+.nst-root--ajakan .nst-poster-wrap { top: 23cqw; bottom: 9cqw; gap: 3.2cqw; }
+.nst-root--ajakan .nst-poster { width: 73cqw; }
+.nst-ajak { display: flex; flex-direction: column; align-items: center; gap: 1.4cqw; text-align: center; }
+.nst-ajak-kicker {
+  font-size: 3.4cqw; font-weight: 800; font-style: italic; line-height: 1;
+  text-transform: uppercase; letter-spacing: .32em !important; padding-left: .32em !important;
+  color: var(--nsd-cream);
+}
+.nst-ajak-title {
+  display: flex; flex-direction: column; align-items: center;
+  font-family: 'Anton', sans-serif; font-weight: 400; font-size: 11.6cqw; line-height: 1.08;
+  text-transform: uppercase; letter-spacing: .01em !important;
+  color: var(--nsd-yellow); text-shadow: var(--nsd-title-shadow);
+}
+.nst-ajak-title span + span { color: var(--nsd-cream); }
+.nst-kicker--ajak { gap: 1.6cqw; }

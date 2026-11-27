@@ -79,3 +79,4 @@
 - [x] Bumper 6: pengisi acara (MC, DJ Dityar, Kendang Jaipong, Penari Bajidor) dengan gaya poster feed 63, MP4 8 detik.
 - [x] Bumper 6: label Saduli Ragap untuk Kendang Jaipong & Penari Bajidor; teks tanggal di bawah dihapus.
 - [x] Bumper 6 = Saduli Ragap (kendang + penari), Bumper 7 = DJ Dityar & MC besar; keduanya pakai tirai + lingkaran bawah seperti bumper 5.
+- [x] NEMPO Story slide 03: ajakan "Kita Seru-seruan Bareng!" seperti slide 01, unduhan PNG + MP4

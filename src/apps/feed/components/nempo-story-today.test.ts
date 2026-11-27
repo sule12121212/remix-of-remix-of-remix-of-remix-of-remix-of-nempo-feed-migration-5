@@ -23,3 +23,11 @@ describe('Nempo Story slide', () => {
     expect(NEMPO_STORY_LIVE_EXPORT).toEqual({ width: 3240, height: 5760 });
   });
 });
+
+import { nempoStoryAjakan } from './nempo-story-today';
+
+it('Story slide 03 invites people to Good Story Cafe today', () => {
+  expect(nempoStoryAjakan.kicker).toBe('Hari Ini');
+  expect(nempoStoryAjakan.headline.join(' ')).toBe('Kita Seru-seruan Bareng!');
+  expect(nempoStoryAjakan.venue).toBe('Good Story Cafe');
+});
