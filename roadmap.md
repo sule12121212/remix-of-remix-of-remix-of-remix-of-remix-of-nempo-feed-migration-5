@@ -1,5 +1,8 @@
 # Roadmap
 
+- [x] GGS Feed 69: sesuaikan sembilan motif nail art dengan Natal dan Tahun Baru; perbarui PNG sesuai pratinjau.
+- [ ] GGS Feed 69: video ceria dengan pilihan nail art berganti-ganti, gerakan luwes dan MP4 sesuai pratinjau.
+
 - [x] GGS Feed slide 69: December Nail Edit, sembilan pilihan nail art natural dalam bulatan GGS; PNG 3240×4320 diuji identik lewat tombol unduh, tampilan ponsel dan komputer tanpa tulisan bertumpuk.
 
 - [x] NEMPO Story slide 02: ruang transparan diperbesar menjadi sekitar 78% tinggi Story agar video tidak banyak terpotong; PNG direkam ulang dan unduhan diuji identik.
