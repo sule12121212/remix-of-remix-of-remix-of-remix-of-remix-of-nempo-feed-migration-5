@@ -1,0 +1,155 @@
+/* NEMPO Story 02 — orange poster frame with a genuinely transparent centre. */
+.nslr-root {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 45vh);
+  max-width: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  container-type: inline-size;
+  background: transparent;
+  color: var(--nslr-cream);
+  font-family: 'Poppins', sans-serif;
+}
+.nslr-root * { box-sizing: border-box; letter-spacing: 0; }
+.nslr-root p, .nslr-root h2 { margin: 0; padding: 0; }
+
+/* Four separate painted panels: no background layer crosses the centre opening. */
+.nslr-panel { position: absolute; z-index: 0; display: block; pointer-events: none; }
+.nslr-panel--top {
+  inset: 0 0 auto;
+  height: 27cqw;
+  background: var(--nslr-panel-top);
+  border-bottom: .55cqw solid var(--nslr-gold);
+  box-shadow: var(--nslr-panel-shadow);
+}
+.nslr-panel--top::after,
+.nslr-panel--bottom::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--nslr-pattern);
+  opacity: .36;
+}
+.nslr-panel--left,
+.nslr-panel--right {
+  top: 27cqw;
+  bottom: 12cqw;
+  width: 3cqw;
+  background: var(--nslr-panel-side);
+}
+.nslr-panel--left { left: 0; border-right: .35cqw solid var(--nslr-gold); }
+.nslr-panel--right { right: 0; border-left: .35cqw solid var(--nslr-gold); }
+.nslr-panel--bottom {
+  inset: auto 0 0;
+  height: 12cqw;
+  background: var(--nslr-panel-bottom);
+  border-top: .55cqw solid var(--nslr-gold);
+  box-shadow: var(--nslr-panel-shadow-reverse);
+}
+
+/* The opening has borders and corner ornaments only — its fill remains transparent. */
+.nslr-opening {
+  position: absolute;
+  z-index: 2;
+  top: 27cqw;
+  right: 3cqw;
+  bottom: 12cqw;
+  left: 3cqw;
+  border: .24cqw solid var(--nslr-inner-line);
+  pointer-events: none;
+}
+.nslr-corner { position: absolute; width: 6cqw; height: 6cqw; border-color: var(--nslr-cream); border-style: solid; }
+.nslr-corner--tl { top: 1.2cqw; left: 1.2cqw; border-width: .55cqw 0 0 .55cqw; }
+.nslr-corner--tr { top: 1.2cqw; right: 1.2cqw; border-width: .55cqw .55cqw 0 0; }
+.nslr-corner--bl { bottom: 1.2cqw; left: 1.2cqw; border-width: 0 0 .55cqw .55cqw; }
+.nslr-corner--br { right: 1.2cqw; bottom: 1.2cqw; border-width: 0 .55cqw .55cqw 0; }
+
+.nslr-header { z-index: 3; top: 3cqw; left: 4cqw; right: 4cqw; }
+.nslr-header .kmt-logo { width: 7.5cqw; height: 7.5cqw; }
+.nslr-header .kmt-name strong { font-size: 2.3cqw; }
+.nslr-header .kmt-name span { font-size: 1.7cqw; }
+.nslr-header .kmt-name { text-shadow: var(--nslr-text-shadow); }
+.nslr-header .nar-gsc { background: var(--nslr-cream); }
+.nslr-partners { gap: 1.8cqw; }
+.nslr-partners .nar-saduli { width: 11.5cqw; height: 8.9cqw; }
+.nslr-partners .nar-gsc { width: 7.5cqw; height: 7.5cqw; }
+
+.nslr-heading {
+  position: absolute;
+  z-index: 3;
+  top: 13cqw;
+  left: 3cqw;
+  right: 3cqw;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nslr-heading h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6cqw;
+  font-family: 'Anton', sans-serif;
+  font-size: 8.8cqw;
+  font-weight: 400;
+  line-height: .95;
+  color: var(--nslr-cream);
+  text-shadow: var(--nslr-title-shadow);
+}
+.nslr-live-dot {
+  width: 2cqw;
+  height: 2cqw;
+  flex: none;
+  border-radius: 50%;
+  background: var(--nslr-live-dot);
+  box-shadow: var(--nslr-live-glow);
+}
+.nslr-heading p {
+  margin-top: 1.5cqw;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.8cqw;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: .28em !important;
+  color: var(--nslr-gold-light);
+  text-shadow: var(--nslr-text-shadow);
+}
+
+.nslr-footer {
+  position: absolute;
+  z-index: 3;
+  left: 3cqw;
+  right: 3cqw;
+  bottom: 1.4cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2cqw;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nslr-footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5cqw;
+  min-height: 5.8cqw;
+  padding: 1cqw 3.5cqw;
+  border: .35cqw solid var(--nslr-gold-light);
+  border-radius: 99cqw;
+  background: var(--nslr-date-pill);
+  box-shadow: var(--nslr-pill-shadow);
+  font-size: 2.6cqw;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+.nslr-footer p b { color: var(--nslr-gold-light); font-weight: 900; }
+.nslr-footer p span { color: var(--nslr-gold); }
+.nslr-footer > span {
+  font-family: 'Anton', sans-serif;
+  font-size: 3.4cqw;
+  line-height: 1;
+  color: var(--nslr-cream);
+  text-shadow: var(--nslr-text-shadow);
+}

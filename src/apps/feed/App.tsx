@@ -234,12 +234,14 @@ import { GarutBeansOpeningSlide } from './components/GarutBeansOpeningSlide';
 import { GARUT_BEANS_SLIDES, type GarutBeansSlide } from './components/garut-beans-feed';
 import garutBeansOpeningPng from '@/assets/garut-beans/garut-beans-01-filosofi-logo.png.asset.json';
 import { NempoStoryTodaySlide } from './components/NempoStoryTodaySlide';
+import { NempoStoryLiveReportSlide } from './components/NempoStoryLiveReportSlide';
 import nempoStoryBajidoranMp4 from '@/assets/nempo-story/nempo-story-02-bajidoran-lampu.mp4.asset.json';
 import nempoBarBumperMp4 from '@/assets/nempo-bumper/nempo-rusa-bumper-kecil.mp4.asset.json';
 import nempoBajidoranBumperMp4 from '@/assets/nempo-bumper/nempo-bumper-05-bajidoran-dj-anim.mp4.asset.json';
 import nempoLineupBumperMp4 from '@/assets/nempo-bumper/nempo-bumper-06-saduli-ragap.mp4.asset.json';
 import nempoDjMcBumperMp4 from '@/assets/nempo-bumper/nempo-bumper-07-dj-mc.mp4.asset.json';
 import nempoStoryBajidoranPng from '@/assets/nempo-story/nempo-story-02-bajidoran.png.asset.json';
+import nempoStoryLiveReportPng from '@/assets/nempo-story/nempo-story-02-live-report.png.asset.json';
 import ggsPovScrubPng from '@/assets/ggs-feed-53-pov-playlist-owner.png.asset.json';
 import ggsPromoAkhirTahunPng from '@/assets/ggs-feed-60-promo-akhir-tahun.png.asset.json';
 import ggsTeaserSpesialPng from '@/assets/ggs-feed-61-something-spesial.png.asset.json';
@@ -3277,6 +3279,7 @@ function App() {
   const [activeClientSlide, setActiveClientSlide] = useState<ClientSlide>(3);
   const [garutBeansSlide, setGarutBeansSlide] = useState<GarutBeansSlide>(1);
   const [ggsMenSlide, setGgsMenSlide] = useState<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11>(1);
+  const [nempoStorySlide, setNempoStorySlide] = useState<1 | 2>(2);
   const [isDownloading, setIsDownloading] = useState(false);
   const [preparedNempoPng, setPreparedNempoPng] = useState<{
     url: string;
@@ -3286,6 +3289,7 @@ function App() {
   const [downloadError, setDownloadError] = useState<string | null>(null);
   const [nbtCapture, setNbtCapture] = useState(false);
   const [nblCapture, setNblCapture] = useState<'saduli' | 'djmc' | null>(null);
+  const [nslrCapture, setNslrCapture] = useState(false);
   const exportRef = useRef<HTMLElement | null>(null);
 
   /** Bumper 5 recording pass: `?nbt=css` swaps the whole page for the lettering-only stage. */
@@ -3297,6 +3301,7 @@ function App() {
       const nbl = new URLSearchParams(window.location.search).get('nbl');
       setNblCapture(nbl === 'saduli' || nbl === 'djmc' ? nbl : null);
     }
+    setNslrCapture(new URLSearchParams(window.location.search).get('nslr') === 'plain');
   }, []);
   const isNempoFeed = activeFeed === 'nempo';
   const isHighQualityNempoStorySlide =
@@ -3615,6 +3620,10 @@ function App() {
   const selectedSlide =
     isGgsFeed ? activeClientSlide : activeSlide;
 
+  /** Isolated transparent capture for NEMPO Story 01. */
+  if (nslrCapture) {
+    return <NempoStoryLiveReportSlide />;
+  }
   /** Bumper 5 recording pass: `?nbt=css` renders the lettering-only stage for frame capture. */
   /** Bumper 6 recording pass: `?nbl=css` renders the performer line-up stage for frame capture. */
   if (nblCapture) {
@@ -3805,20 +3814,37 @@ function App() {
         </div>
         {isNempoStory && (
           <div className="mb-3 flex flex-col items-center gap-2">
-            <PrebuiltPngDownload
-              key="nempo-story-02"
-              src={nempoStoryBajidoranPng.url}
-              fileName="Nempo-Story-02-Bajidoran-Hari-Ini.png"
-              label="Download PNG"
-              className="inline-flex items-center gap-2 rounded-full bg-[#062f4d] px-4 py-2 text-[11px] font-black text-white shadow-[0_8px_20px_rgba(0,40,78,0.2)] transition-colors hover:bg-[#0b4d69] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffdd00] focus-visible:ring-offset-2"
-            />
-            <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
-              PNG 3240×5760 ukuran Story, teks tajam. Di iPad/iPhone pilih “Simpan Gambar” atau “Simpan ke File”.
-            </p>
-            <PrebuiltVideoDownload key="nempo-story-02-mp4" src={nempoStoryBajidoranMp4.url} fileName="Nempo-Story-02-Bajidoran-Lampu.mp4" />
-            <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
-              Video Story 6 detik · 1080×1920 · lampu panggung bergerak menyorot poster, berulang mulus, persis seperti pratinjau.
-            </p>
+            {nempoStorySlide === 2 ? (
+              <>
+                <PrebuiltPngDownload
+                  key="nempo-story-02-live-report"
+                  src={nempoStoryLiveReportPng.url}
+                  fileName="Nempo-Story-02-Live-Report-Transparan.png"
+                  label="Download PNG transparan"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#062f4d] px-4 py-2 text-[11px] font-black text-white shadow-[0_8px_20px_rgba(0,40,78,0.2)] transition-colors hover:bg-[#0b4d69] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffdd00] focus-visible:ring-offset-2"
+                />
+                <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
+                  PNG 3240×5760 dengan bagian tengah transparan untuk foto/video live report. Di iPad/iPhone pilih “Simpan Gambar” atau “Simpan ke File”.
+                </p>
+              </>
+            ) : (
+              <>
+                <PrebuiltPngDownload
+                  key="nempo-story-01"
+                  src={nempoStoryBajidoranPng.url}
+                  fileName="Nempo-Story-01-Bajidoran-Hari-Ini.png"
+                  label="Download PNG"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#062f4d] px-4 py-2 text-[11px] font-black text-white shadow-[0_8px_20px_rgba(0,40,78,0.2)] transition-colors hover:bg-[#0b4d69] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffdd00] focus-visible:ring-offset-2"
+                />
+                <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
+                  PNG 3240×5760 ukuran Story, teks tajam. Di iPad/iPhone pilih “Simpan Gambar” atau “Simpan ke File”.
+                </p>
+                <PrebuiltVideoDownload key="nempo-story-01-mp4" src={nempoStoryBajidoranMp4.url} fileName="Nempo-Story-01-Bajidoran-Lampu.mp4" />
+                <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
+                  Video Story 6 detik · 1080×1920 · lampu panggung bergerak menyorot poster, berulang mulus, persis seperti pratinjau.
+                </p>
+              </>
+            )}
           </div>
         )}
         {isNempoBumper && (
@@ -4791,7 +4817,7 @@ function App() {
         ) : isGarutBeans ? (
           <GarutBeansOpeningSlide key={garutBeansSlide} exportRef={exportRef} />
         ) : isNempoStory ? (
-          <NempoStoryTodaySlide exportRef={exportRef} />
+          nempoStorySlide === 2 ? <NempoStoryLiveReportSlide exportRef={exportRef} /> : <NempoStoryTodaySlide exportRef={exportRef} />
         ) : isGgsMen ? (
           ggsMenSlide === 11 ? <GgsMenTeaserSpesialSlide exportRef={exportRef} /> : ggsMenSlide === 10 ? <GgsMenUndanganSlide exportRef={exportRef} /> : ggsMenSlide === 9 ? <GgsMenGiveawaySlide exportRef={exportRef} /> : ggsMenSlide === 8 ? <GgsMenPovSlide exportRef={exportRef} /> : ggsMenSlide === 7 ? <GgsMenCutCoverSlide exportRef={exportRef} lead="Two" tail="Block" photo={ggsMenTwoBlockPhoto.url} photoWidth={1478} photoHeight={1504} photoPosition="50% 30%" /> : ggsMenSlide === 6 ? <GgsMenColouringPromoSlide exportRef={exportRef} /> : ggsMenSlide === 5 ? <GgsMenPermPromoSlide exportRef={exportRef} /> : ggsMenSlide === 4 ? <GgsMenCutCoverSlide exportRef={exportRef} /> : ggsMenSlide === 3 ? <GgsMenDoubleDaySlide exportRef={exportRef} /> : ggsMenSlide === 2 ? <GgsMenContactSlide exportRef={exportRef} /> : <GgsMenHairCardsSlide exportRef={exportRef} />
         ) : isGgsFeed ? (
@@ -4850,6 +4876,22 @@ function App() {
           />
         ) : (
           <FeedArtwork slide={activeSlide} exportRef={exportRef} />
+        )}
+        {isNempoStory && (
+          <div className="mt-4 flex max-w-[94vw] items-center gap-1 overflow-x-auto rounded-full bg-[#062f4d] p-1 shadow-[0_8px_20px_rgba(0,40,78,0.2)]" aria-label="Pilih slide Nempo Story">
+            {([1, 2] as const).map((slide) => (
+              <Button variant="ghost" size="sm"
+                key={slide}
+                type="button"
+                aria-label={`Tampilkan slide Nempo Story ${String(slide).padStart(2, '0')}`}
+                aria-pressed={nempoStorySlide === slide}
+                onClick={() => setNempoStorySlide(slide)}
+                className={`h-7 rounded-full px-3 py-1 text-[10px] font-black ${nempoStorySlide === slide ? 'bg-[#ffdd00] text-[#062f4d] hover:bg-[#ffdd00]' : 'text-white/75 hover:bg-transparent hover:text-white'}`}
+              >
+                {String(slide).padStart(2, '0')}
+              </Button>
+            ))}
+          </div>
         )}
         {isGgsMen && (
           <div className="mt-4 flex max-w-[94vw] items-center gap-1 overflow-x-auto rounded-full bg-[#062f4d] p-1 shadow-[0_8px_20px_rgba(0,40,78,0.2)]" aria-label="Pilih slide GGS Cowok">

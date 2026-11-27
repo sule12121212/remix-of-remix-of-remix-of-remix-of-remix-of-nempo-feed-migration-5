@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { NEMPO_STORY_EXPORT, nempoStoryBajidoran } from './nempo-story-today';
+import { NEMPO_STORY_EXPORT, NEMPO_STORY_LIVE_EXPORT, nempoStoryBajidoran, nempoStoryLiveReport } from './nempo-story-today';
 
 describe('Nempo Story slide', () => {
   it('shows the owner’s copy word for word', () => {
@@ -15,5 +15,11 @@ describe('Nempo Story slide', () => {
   it('exports as a 9:16 story PNG', () => {
     expect(NEMPO_STORY_EXPORT.width / NEMPO_STORY_EXPORT.height).toBeCloseTo(9 / 16, 6);
     expect(NEMPO_STORY_EXPORT).toEqual({ width: 3240, height: 5760 });
+  });
+  it('keeps slide 02 as a transparent-centred live-report frame', () => {
+    expect(nempoStoryLiveReport.headline).toBe('Live Report');
+    expect(nempoStoryLiveReport.event).toBe('Bajidoran DJ');
+    expect(nempoStoryLiveReport.transparentCenter).toBe(true);
+    expect(NEMPO_STORY_LIVE_EXPORT).toEqual({ width: 3240, height: 5760 });
   });
 });

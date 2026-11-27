@@ -1,5 +1,8 @@
 # Roadmap
 
+- [x] NEMPO Story slide 02: ruang transparan diperbesar menjadi sekitar 78% tinggi Story agar video tidak banyak terpotong; PNG direkam ulang dan unduhan diuji identik.
+- [x] NEMPO Story slide 02: bingkai live report oranye-emas dengan tengah transparan, PNG 3240×5760 tanpa unduhan video; poster Bajidoran tetap sebagai slide 01.
+
 - [x] Bumper 5: tingkatkan animasi dan tambahkan ornamen emas profesional (mandala putar, bingkai sudut, divider, sorotan lampu, partikel emas) + rekam ulang MP4 1080×1440 8 detik.
 - [x] Bumper 5: animasi tulisan emas Bajidoran DJ saja (tanpa rusa), tirai emas tetap; MP4 1080×1440 8 detik, putar/jeda/ulang dan unduhan identik diuji.
 - [x] Bumper 5: tulisan diturunkan ke tengah, video direkam ulang.
