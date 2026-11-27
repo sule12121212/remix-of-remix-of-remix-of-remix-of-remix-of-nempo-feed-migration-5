@@ -29,8 +29,8 @@ export function GgsFestiveNailsVideo({ src, poster }: { src: string; poster: str
   };
 
   return (
-    <section className="relative w-full" aria-label="GGS December Nail Edit — video Natal dan Tahun Baru">
-      <div className="absolute right-2 top-2 z-10 flex gap-1">
+    <section className="relative w-full pb-12" aria-label="GGS December Nail Edit — video Natal dan Tahun Baru">
+      <div className="absolute bottom-1 right-0 z-10 flex gap-1">
         <Button variant="secondary" size="icon" title={playing ? 'Jeda video' : 'Putar video'} aria-label={playing ? 'Jeda video nail art' : 'Putar video nail art'} onClick={toggle}>{playing ? <Pause /> : <Play />}</Button>
         <Button variant="secondary" size="icon" title="Putar ulang" aria-label="Putar ulang video nail art" onClick={replay}><RotateCcw /></Button>
         <Button variant="secondary" size="icon" title={muted ? 'Nyalakan suara' : 'Matikan suara'} aria-label={muted ? 'Nyalakan suara video nail art' : 'Matikan suara video nail art'} onClick={() => setMuted(value => !value)}>{muted ? <VolumeX /> : <Volume2 />}</Button>
