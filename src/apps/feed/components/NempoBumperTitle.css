@@ -37,6 +37,7 @@
 .nbt-glint-wrap {
   mix-blend-mode: screen;
   pointer-events: none;
+  transform-origin: 50% 40%;
   -webkit-mask-image: var(--nbt-letters);
   mask-image: var(--nbt-letters);
   -webkit-mask-size: 100% 100%;
@@ -60,6 +61,169 @@
     rgba(255, 255, 255, 0) 100%
   );
   will-change: transform, opacity;
+}
+
+.nbt-glint-sharp {
+  width: 24%;
+  background: linear-gradient(
+    108deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 252, 235, 0.96) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.nbt-beam {
+  position: absolute;
+  top: 60px;
+  width: 440px;
+  height: 1180px;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transform-origin: 50% 0%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 224, 130, 0.42) 0%,
+    rgba(255, 198, 72, 0.16) 45%,
+    rgba(255, 198, 72, 0) 100%
+  );
+  clip-path: polygon(42% 0%, 58% 0%, 100% 100%, 0% 100%);
+  filter: blur(18px);
+}
+
+.nbt-beam-l {
+  left: 110px;
+}
+
+.nbt-beam-r {
+  right: 110px;
+}
+
+.nbt-ring-ripple {
+  position: absolute;
+  left: 50%;
+  top: 90.5%;
+  width: 680px;
+  height: 136px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 222, 128, 0.85);
+  box-shadow: 0 0 32px rgba(255, 196, 64, 0.65), inset 0 0 24px rgba(255, 222, 128, 0.45);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.nbt-mandala {
+  position: absolute;
+  left: 50%;
+  top: 31%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  filter: drop-shadow(0 0 16px rgba(255, 200, 70, 0.55));
+}
+
+.nbt-mandala-outer {
+  width: 660px;
+  height: 660px;
+}
+
+.nbt-mandala-inner {
+  width: 520px;
+  height: 520px;
+}
+
+.nbt-burst {
+  position: absolute;
+  left: 50%;
+  top: 31%;
+  width: 640px;
+  height: 640px;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(255, 245, 200, 0.72) 0%,
+    rgba(255, 204, 78, 0.34) 36%,
+    rgba(255, 180, 40, 0) 72%
+  );
+}
+
+.nbt-crest {
+  position: absolute;
+  left: 50%;
+  top: 48.5%;
+  width: 680px;
+  height: 44px;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  filter: drop-shadow(0 0 12px rgba(255, 210, 96, 0.7));
+}
+
+.nbt-frame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 10px rgba(255, 205, 84, 0.55));
+}
+
+.nbt-corner {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+}
+
+.nbt-corner-tl {
+  top: 158px;
+  left: 44px;
+}
+
+.nbt-corner-tr {
+  top: 158px;
+  right: 44px;
+  transform: scaleX(-1);
+}
+
+.nbt-corner-bl {
+  bottom: 44px;
+  left: 44px;
+  transform: scaleY(-1);
+}
+
+.nbt-corner-br {
+  bottom: 44px;
+  right: 44px;
+  transform: scale(-1, -1);
+}
+
+.nbt-embers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.nbt-ember {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fffbe2 0%, #ffd264 45%, rgba(255, 188, 48, 0) 75%);
+  box-shadow: 0 0 10px rgba(255, 208, 86, 0.75);
+}
+
+.nbt-ember-star {
+  border-radius: 0;
+  background: #fff8d6;
+  clip-path: polygon(
+    50% 0%,
+    60% 40%,
+    100% 50%,
+    60% 60%,
+    50% 100%,
+    40% 60%,
+    0% 50%,
+    40% 40%
+  );
+  box-shadow: 0 0 14px rgba(255, 224, 128, 0.9);
 }
 
 .nbt-curt-l,

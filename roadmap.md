@@ -1,5 +1,6 @@
 # Roadmap
 
+- [x] Bumper 5: tingkatkan animasi dan tambahkan ornamen emas profesional (mandala putar, bingkai sudut, divider, sorotan lampu, partikel emas) + rekam ulang MP4 1080×1440 8 detik.
 - [x] Bumper 5: animasi tulisan emas Bajidoran DJ saja (tanpa rusa), tirai emas tetap; MP4 1080×1440 8 detik, putar/jeda/ulang dan unduhan identik diuji.
 
 - [x] GGS Feed 67–68: samakan unduhan PNG dengan pratinjau dan uji kedua tombol unduh (3240×4320, file identik di layar kecil/besar).
