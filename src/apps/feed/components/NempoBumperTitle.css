@@ -1,0 +1,119 @@
+/* Bumper 5 (Bajidoran DJ) capture view: gold lettering only, no deer. */
+.nbt-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1080px;
+  height: 1440px;
+  overflow: hidden;
+  background: #000;
+}
+
+.nbt-stage {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 50%;
+}
+
+.nbt-plate,
+.nbt-letters,
+.nbt-glint-wrap {
+  position: absolute;
+  inset: 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.nbt-plate {
+  background-image: var(--nbt-plate);
+}
+
+.nbt-letters {
+  background-image: var(--nbt-letters);
+  transform-origin: 50% 40%;
+  will-change: transform, opacity, filter;
+}
+
+.nbt-glint-wrap {
+  mix-blend-mode: screen;
+  pointer-events: none;
+  -webkit-mask-image: var(--nbt-letters);
+  mask-image: var(--nbt-letters);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
+}
+
+.nbt-glint {
+  position: absolute;
+  top: -10%;
+  bottom: -10%;
+  left: 0;
+  width: 62%;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 244, 214, 0.85) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  will-change: transform, opacity;
+}
+
+.nbt-curt-l,
+.nbt-curt-r {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-image: var(--nbt-curtain);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.nbt-curt-l {
+  left: 0;
+  background-position: left top;
+  transform-origin: left center;
+}
+
+.nbt-curt-r {
+  right: 0;
+  background-position: right top;
+  transform-origin: right center;
+}
+
+/* soft thickness along the leading edge so the panels do not read as flat cut-outs */
+.nbt-curt-l::after,
+.nbt-curt-r::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+}
+
+.nbt-curt-l::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+}
+
+.nbt-curt-r::after {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+}
+
+.nbt-valance {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 152px;
+  background-image: var(--nbt-curtain);
+  background-size: 1080px 1440px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}

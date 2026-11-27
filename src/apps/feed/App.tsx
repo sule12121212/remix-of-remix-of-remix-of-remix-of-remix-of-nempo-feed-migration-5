@@ -143,6 +143,7 @@ import { MusiComedyBumper } from './components/MusiComedyBumper';
 import { NempoLogoOpening } from './components/NempoLogoOpening';
 import { DangdutHalloweenBumper } from './components/DangdutHalloweenBumper';
 import { NempoBarBumper } from './components/NempoBarBumper';
+import NempoBumperTitle from './components/NempoBumperTitle';
 import { Button } from '@/components/ui/button';
 import { renderNempoSlide20Png } from './lib/renderNempoSlide20Png';
 import {
@@ -234,7 +235,7 @@ import garutBeansOpeningPng from '@/assets/garut-beans/garut-beans-01-filosofi-l
 import { NempoStoryTodaySlide } from './components/NempoStoryTodaySlide';
 import nempoStoryBajidoranMp4 from '@/assets/nempo-story/nempo-story-02-bajidoran-lampu.mp4.asset.json';
 import nempoBarBumperMp4 from '@/assets/nempo-bumper/nempo-rusa-bumper-kecil.mp4.asset.json';
-import nempoBajidoranBumperMp4 from '@/assets/nempo-bumper/nempo-bumper-05-bajidoran-dj.mp4.asset.json';
+import nempoBajidoranBumperMp4 from '@/assets/nempo-bumper/nempo-bumper-05-bajidoran-dj-anim.mp4.asset.json';
 import nempoStoryBajidoranPng from '@/assets/nempo-story/nempo-story-02-bajidoran.png.asset.json';
 import ggsPovScrubPng from '@/assets/ggs-feed-53-pov-playlist-owner.png.asset.json';
 import ggsPromoAkhirTahunPng from '@/assets/ggs-feed-60-promo-akhir-tahun.png.asset.json';
@@ -3278,7 +3279,15 @@ function App() {
     key: string;
   } | null>(null);
   const [downloadError, setDownloadError] = useState<string | null>(null);
+  const [nbtCapture, setNbtCapture] = useState(false);
   const exportRef = useRef<HTMLElement | null>(null);
+
+  /** Bumper 5 recording pass: `?nbt=css` swaps the whole page for the lettering-only stage. */
+  useEffect(() => {
+    setNbtCapture(
+      new URLSearchParams(window.location.search).get('nbt') === 'css',
+    );
+  }, []);
   const isNempoFeed = activeFeed === 'nempo';
   const isHighQualityNempoStorySlide =
     isNempoFeed && activeSlide >= 20 && activeSlide <= 45;
@@ -3592,6 +3601,11 @@ function App() {
       : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, ...DIVISION_SLIDES, NEMPO_PAHLAWAN_SLIDE, NEMPO_CS_SLIDE, NEMPO_BAJIDORAN_SLIDE, NEMPO_BAJIDORAN_REEL_SLIDE, NEMPO_BAJIDORAN_SAWER_SLIDE, 49, NEMPO_SADULI_DJ_SLIDE, NEMPO_AJAK_REQUEST_SLIDE, NEMPO_HARI_INI_SLIDE, NEMPO_TERIMA_KASIH_SLIDE, NEMPO_MALAM_MINGGU_SLIDE, NEMPO_KOLABORASI_SLIDE, NEMPO_KOLABORASI_CARA_SLIDE, NEMPO_CAR_FREE_DAY_SLIDE, NEMPO_CFD_INFO_SLIDE, ...NEMPO_MOMEN_DIGITAL_SLIDES, NEMPO_BAJIDORAN_FEST_SLIDE, NEMPO_HARI_GURU_SLIDE];
   const selectedSlide =
     isGgsFeed ? activeClientSlide : activeSlide;
+
+  /** Bumper 5 recording pass: `?nbt=css` renders the lettering-only stage for frame capture. */
+  if (nbtCapture) {
+    return <NempoBumperTitle />;
+  }
 
   return (
     <div
