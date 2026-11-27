@@ -1,11 +1,11 @@
 {
-  "asset_id": "ead7f1a2-5450-4ce5-950a-9ed0d8848577",
-  "content_type": "video/mp4",
-  "created_at": "2026-11-27T09:20:43Z",
-  "original_filename": "nempo-bumper-06-pengisi-acara.mp4",
+  "version": 1,
+  "asset_id": "2dc7a560-1d60-4a48-9545-f14800ae4708",
   "project_id": "faab7ca5-af31-4e1e-a61b-38d6acdd5a09",
-  "r2_key": "a/v1/faab7ca5-af31-4e1e-a61b-38d6acdd5a09/ead7f1a2-5450-4ce5-950a-9ed0d8848577/nempo-bumper-06-pengisi-acara.mp4",
-  "size": 7246986,
-  "url": "/__l5e/assets-v1/ead7f1a2-5450-4ce5-950a-9ed0d8848577/nempo-bumper-06-pengisi-acara.mp4",
-  "version": 1
+  "url": "/__l5e/assets-v1/2dc7a560-1d60-4a48-9545-f14800ae4708/nempo-bumper-06-saduli-ragap.mp4",
+  "r2_key": "a/v1/faab7ca5-af31-4e1e-a61b-38d6acdd5a09/2dc7a560-1d60-4a48-9545-f14800ae4708/nempo-bumper-06-saduli-ragap.mp4",
+  "original_filename": "nempo-bumper-06-saduli-ragap.mp4",
+  "size": 8656343,
+  "content_type": "video/mp4",
+  "created_at": "2026-11-27T09:43:52Z"
 }
