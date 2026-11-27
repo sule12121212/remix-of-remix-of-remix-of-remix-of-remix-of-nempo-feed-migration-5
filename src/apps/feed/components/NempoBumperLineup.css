@@ -120,3 +120,21 @@
   font-size: 30px;
   white-space: nowrap;
 }
+
+.nbl-group {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 955px;
+  padding: 8px 40px 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fff35a, #ffb20c);
+  color: #3a1504;
+  font-family: 'Anton', sans-serif;
+  font-size: 58px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 5px solid #3a1504;
+  box-shadow: 0 7px 0 #7a3104, 0 14px 26px rgba(60, 15, 0, 0.5);
+}

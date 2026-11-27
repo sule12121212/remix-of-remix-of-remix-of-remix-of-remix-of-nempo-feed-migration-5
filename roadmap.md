@@ -74,3 +74,4 @@
 - [x] Logo NEMPO 3D emas tanpa merubah bentuk, di tengah video rusa
 - [x] Bumper 5: tambah tulisan "Organized by NEMPO.id" di bawah judul, video direkam ulang.
 - [x] Bumper 6: pengisi acara (MC, DJ Dityar, Kendang Jaipong, Penari Bajidor) dengan gaya poster feed 63, MP4 8 detik.
+- [x] Bumper 6: label Saduli Ragap untuk Kendang Jaipong & Penari Bajidor; teks tanggal di bawah dihapus.

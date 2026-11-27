@@ -63,6 +63,12 @@ export default function NempoBumperLineup() {
         foot.style.opacity = `${fp}`;
         foot.style.transform = `translateX(-50%) translateY(${(1 - fp) * 40}px)`;
       }
+      const group = root.querySelector<HTMLElement>('.nbl-group');
+      if (group) {
+        const gp = easeOutBack(clamp01((t - 3.5) / 0.6));
+        group.style.opacity = `${clamp01((t - 3.5) / 0.3) * (1 - exitP(t))}`;
+        group.style.transform = `translateX(-50%) rotate(-3deg) scale(${gp})`;
+      }
       const bgEl = root.querySelector<HTMLElement>('.nbl-bg');
       if (bgEl) bgEl.style.transform = `scale(${1.06 + 0.04 * Math.sin((2 * Math.PI * t) / NBL_LOOP_SECONDS)})`;
       root.querySelectorAll<HTMLElement>('.nbl-glow').forEach((g, i) => {
@@ -107,9 +113,8 @@ export default function NempoBumperLineup() {
           {c.tone === 'dark' ? <span className="sr-only">{c.label}</span> : <div className={`nbl-pill nbl-pill-${c.tone}`}>{c.label}</div>}
         </div>
       ))}
-      <div className="nbl-foot">
-        {nempoBajidoranFest.title} · {nempoBajidoranFest.date.day} {nempoBajidoranFest.date.month} {nempoBajidoranFest.date.year} · Good Story Cafe
-      </div>
+      {/* Kendang Jaipong and Penari Bajidor are both performed by Saduli Ragap */}
+      <div className="nbl-group">Saduli Ragap</div>
     </div>
   );
 }
