@@ -45,7 +45,6 @@ export function nblCard(t: number, at: number) {
 const VARIANTS = {
   saduli: {
     title: 'Saduli Ragap',
-    kicker: 'Pengisi Acara',
     cards: [
       { key: 'kendang', src: kendang, label: nempoBajidoranFest.activities[0], at: 1.3, from: -1 },
       { key: 'penari', src: penari, label: nempoBajidoranFest.activities[1], at: 2.0, from: 1 },
@@ -53,7 +52,6 @@ const VARIANTS = {
   },
   djmc: {
     title: `${nempoBajidoranFest.dj} & ${nempoBajidoranFest.mc}`,
-    kicker: 'Pengisi Acara',
     cards: [
       { key: 'mc', src: mc, label: null, at: 1.3, from: -1 },
       { key: 'dj', src: dj, label: null, at: 2.0, from: 1 },
@@ -83,7 +81,9 @@ export default function NempoBumperLineup({ variant }: { variant: LineupVariant 
       if (title) {
         const p = clamp01((t - 0.9) / 0.7);
         title.style.opacity = `${clamp01(p * 2) * (1 - exitP(t))}`;
-        title.style.transform = `translateX(-50%) scale(${(0.5 + 0.5 * easeOutBack(p)) * (1 + 0.015 * Math.sin((2 * Math.PI * t) / 2))})`;
+        const e = easeOutBack(p);
+        title.style.transform = `translateX(-50%) translateY(${(1 - e) * 520}px) skewX(${(1 - p) * -14}deg) scale(${(0.7 + 0.3 * e) * (1 + 0.015 * Math.sin((2 * Math.PI * t) / 2))})`;
+        title.style.filter = `blur(${(1 - p) * 10}px)`;
       }
       v.cards.forEach((c) => {
         const el = root.querySelector<HTMLElement>(`.nbl-card-${c.key}`);
@@ -91,7 +91,9 @@ export default function NempoBumperLineup({ variant }: { variant: LineupVariant 
         const f = nblCard(t, c.at);
         const bob = 6 * Math.sin((2 * Math.PI * t) / 4 + c.at);
         el.style.opacity = `${f.opacity}`;
-        el.style.transform = `translateX(${c.from * f.offset * 300}px) translateY(${bob}px) scale(${f.scale}) rotate(${c.from * -2.5}deg)`;
+        const swirl = Math.sin(f.offset * Math.PI * 1.5);
+        el.style.transform = `translateX(${c.from * swirl * 90}px) translateY(${f.offset * 900 + bob}px) scale(${f.scale}) rotate(${c.from * -2.5 + c.from * f.offset * 14}deg) skewX(${c.from * f.offset * -10}deg)`;
+        el.style.filter = `blur(${Math.max(0, f.offset) * 12}px)`;
         const pill = el.querySelector<HTMLElement>('.nbl-pill');
         if (pill) pill.style.transform = `translateX(-50%) scale(${easeOutBack(clamp01((t - c.at - 0.35) / 0.5))})`;
       });
@@ -110,7 +112,6 @@ export default function NempoBumperLineup({ variant }: { variant: LineupVariant 
         <div className="nbl-plate" style={{ backgroundImage: `url(${plate})` }} />
         <div className="nbl-ring" />
         <div className="nbl-title">
-          <span className="nbl-kicker">{v.kicker}</span>
           <span className="nbl-name">{v.title}</span>
         </div>
         {v.cards.map((c) => (

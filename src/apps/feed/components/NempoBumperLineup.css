@@ -25,27 +25,19 @@
   position: absolute;
   z-index: 3;
   left: 50%;
-  top: 190px;
+  top: 230px;
   display: flex;
   flex-direction: column;
   align-items: center;
   white-space: nowrap;
   transform-origin: 50% 50%;
 }
-.nbl-kicker {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
-  font-size: 46px;
-  letter-spacing: 0.08em;
-  color: #ffe7a3;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-}
 .nbl-name {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  font-style: italic;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 112px;
+  letter-spacing: 0.04em;
+  font-size: 118px;
   line-height: 1;
   background: linear-gradient(180deg, #fff6d2 0%, #f8d468 45%, #c98d2a 100%);
   background-clip: text;
@@ -53,7 +45,7 @@
   filter: drop-shadow(2px 2px 0 #7a4a10) drop-shadow(4px 4px 0 #5f380a) drop-shadow(6px 6px 0 #4a2a06)
     drop-shadow(0 0 22px rgba(255, 200, 80, 0.55));
 }
-.nbl-djmc .nbl-name { font-size: 104px; }
+.nbl-djmc .nbl-name { font-size: 96px; }
 
 .nbl-card { position: absolute; z-index: 2; transform-origin: 50% 60%; }
 .nbl-photo {
@@ -79,7 +71,7 @@
   border-radius: 999px;
   background: linear-gradient(180deg, #fff35a, #ffb20c);
   color: #3a1504;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 800;
   font-size: 44px;
   white-space: nowrap;
